@@ -1,0 +1,74 @@
+﻿/* --------------------------------------
+   Global Styles
+   -------------------------------------- */
+  /*Custom fonts*/
+
+
+/*General styles*/
+html, body                    {    height: 100%;}
+body                          {    margin: 0;
+                                   padding: 0;
+                                   -ms-overflow-x: hidden;
+                                       overflow-x: hidden;
+                                   max-width: 100%;}
+
+p                             {    color: #000;}
+h1, h2, h3, h4, h5, p         {    margin: 0;}
+a                             {    text-decoration: none;}
+strong                        {    font-weight: 900;}
+ul                            {    padding: 0;}
+*                             {    box-sizing: border-box; outline: none;}
+*:focus                       {    outline: none;}
+::-moz-focus-inner            {    border:0;}
+.clearfix:after               {    content: " "; 
+                                   visibility: hidden;
+                                   display: block;
+                                   height: 0;
+                                   clear: both;}
+
+a[href^=tel]                  {     color:inherit !important; text-decoration:none;}
+
+.wrapper                      {    margin: 0 auto;
+                                   text-align: center;
+                                   width: 1200px;}
+ 
+.col-1                        {    width: 100%;}
+.col-2                        {    width: 50%;}
+.col-3                        {    width: 33.33%;}
+.col-4                        {    width: 25%;}
+
+.col-1,
+.col-2,
+.col-3,
+.col-4                        {    float: left; height: 100%;}
+
+.vertical:before              {    content: " "; 
+                                   display: inline-block; vertical-align: middle; 
+                                   height: 100%;
+                                   margin-right: 0;
+                              }
+
+.float-right                  {    float: right;}
+
+
+@media (max-width: 1250px) {
+}
+@media (max-width: 800px) {
+}
+@media (max-width: 660px) {
+}
+@media (max-width: 570px) {
+}
+@media (max-width: 360px) {
+}
+
+
+/* --------------------------------------
+   Custom Styles
+   -------------------------------------- */
+
+
+
+
+
+/*---------------------------------------------------------------*/
