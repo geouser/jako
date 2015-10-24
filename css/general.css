@@ -43,8 +43,8 @@ a[href^=tel]                  {     color:inherit !important; text-decoration:no
    -------------------------------------- */
 
 .slider                                 {
-                                            height: 100vh;
-                                            width: 100vw;
+                                            height: 100%;
+                                            width: 100%;
                                             margin: 0;
                                             text-align: center;
                                         }
@@ -173,14 +173,19 @@ a[href^=tel]                  {     color:inherit !important; text-decoration:no
 
 
 
+        @media (max-width: 1200px) {
+            .slide main h1 br           { display: none;}
+        }
+
         @media (max-width: 765px)               { 
-            .slide main                 {width: 100vw;}
+            .slide main                 {width: 98%;}
             .slide main h1              {width: 100%;
                                         padding: 17px 5.2vw 25px 5.2vw;
                                         font-size: 5.2vw;
                                         line-height: 5.2vw;
                                         min-height: auto;
                                         }
+            
         }
 
         @media (max-width: 500px)                 { 
@@ -191,6 +196,16 @@ a[href^=tel]                  {     color:inherit !important; text-decoration:no
         @media (max-width: 400px)                 { 
             .moreInfo span              {font-size: 14px; margin-right: 5px; padding: 8px 10px 6px;}
         }
+
+        /*@media (max-height: 500px) and (orientation: landscape){
+            .slide main h1              { font-size: 5.2vh; line-height: 5.2vh;}
+            .moreInfo span              { font-size: 12px; margin-right: 5px; padding: 8px 10px 6px;}
+        }*/
+        @media (max-height: 320px) and (orientation: landscape){
+            .slide main h1              { font-size: 6.2vh; line-height: 6.2vh;}
+            .moreInfo span              { font-size: 12px; margin-right: 5px; padding: 8px 10px 6px;}
+        }
+
         @media (max-height: 750px)                 { 
             .slide main                 {padding-top: 35vh;}
         }
@@ -317,27 +332,36 @@ header .phone span               {
         @media (max-width: 1400px) {
           nav li a                { font-size: 16px;}
           header .phone span      { font-size: 22px;}
+
         }
 
         @media (max-width: 1200px) {
           header                  { height: 75px;}
+          header .phone           { width: 214px;}
+
           .menu-button            { display: inline-block; vertical-align: middle;}
           nav .menu               { display:none; position: absolute; 
                                     top: 100%; left: 50%; 
-                                    margin-left: -160px; width: 320px; 
+                                    margin-left: -50vw; width: 100vw; 
                                     padding-top: 25px;
+                                    z-index: 10;
                                   }
-          nav ul                  { display: block;}
-          nav ul li               { display: inline-block; background-color: rgba(0, 0, 0, 0.85); 
-                                     margin: 0 -2px; width: 50%;
-                                  }
-          nav ul li a             { display: block; height: 100%; padding: 8px 0;}
-          nav ul li a:hover       { background-color: #000; border: none; padding: 8px 0; margin: 0;}
+          nav ul                  { display: block; width: 100%; background-color: rgba(0, 0, 0, 0.85);}
+          nav ul li               { display: inline-block;}
+          nav ul li a             { display: block; padding: 12px 0;}
         }
 
-        @media (max-width: 600px) {
+        @media (max-width: 650px) {
+          header .phone           { width: 200px;}
           .logo                   { width: 200px;}
           header .phone           { display: none;}
           header                  { text-align: right;}
-          nav .menu               { margin-left: 0; right: -6.25vw; left: auto;}
+          nav .menu               { margin-left: 0; right: -6.25vw; left: auto; width: 320px;}
+          nav ul li               { width: 50%; margin: 0 -2px;}
+          nav ul li a:hover       { padding: 12px 0; background-color: #000; border: none;}
+        }
+
+        @media (max-height: 320px) and (orientation: landscape) {
+          header                  { height: 55px;}
+          nav .menu               { padding-top: 15px;}
         }
