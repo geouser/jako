@@ -11,7 +11,7 @@ body                          {    margin: 0;
                                    -ms-overflow-x: hidden;
                                        overflow-x: hidden;
                                    max-width: 100%;
-                                   font-family: 'Georgia', serif}
+                                   font-family: 'Georgia', serif;}
 
 p                             {    color: #000;}
 h1, h2, h3, h4, h5, p         {    margin: 0;}
@@ -119,7 +119,7 @@ a[href^=tel]                  {     color:inherit !important; text-decoration:no
                                 vertical-align: middle;
                                 padding-top: 15%;
                                 margin: 0 auto;
-                                width: 750px;
+                                width: 760px;
                                 position: relative;
                                 z-index: 3;
                                 }
@@ -138,10 +138,9 @@ a[href^=tel]                  {     color:inherit !important; text-decoration:no
                                         background-size: 100% 100%;
                                 }
 .slide main h1                  {display: inline-block; vertical-align: middle;
-                                font: 40px/40px "Georgia";
                                 min-height: 120px;
                                 width: 100%;
-                                padding: 17px 0;
+                                padding: 17px 40px 25px 40px;
                                 position: relative;
                                 background-image: url(../images/textBg.png);
                                 background-repeat: no-repeat;
