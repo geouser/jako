@@ -135,7 +135,7 @@ a[href^=tel]                  {     color:inherit !important; text-decoration:no
                                         }
 .moreInfo                               {
                                             display: inline-block;
-                                            margin: -12px auto 0;
+                                            margin: -13px auto 0;
                                             border: none;
                                             padding: 12px 25px 10px;
                                             background: transparent;
@@ -168,8 +168,9 @@ a[href^=tel]                  {     color:inherit !important; text-decoration:no
                                                  -o-transition: all 0.3s;
                                                     transition: all 0.3s;
                                         }
-.moreInfo:hover  span                   {  opacity: 0.7;}
-.moreInfo:hover  img                    {  opacity: 0.7;}
+.moreInfo:hover  span                   {  opacity: 0.5;}
+.moreInfo:hover  img                    {  opacity: 0.5;}
+
 
 
         @media (max-width: 765px)               { 
