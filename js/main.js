@@ -90,6 +90,20 @@ jQuery(document).ready(function($) {
     $.magnificPopup.close();
   });
 
+
+  /*Toggle menu with .menu-button*/
+  $('.menu-button').on('click', function(event) {
+    event.preventDefault();
+    $(this).toggleClass('active');
+    $(this).siblings('.menu').fadeToggle('fast');
+  });
+
+ /* $('.menu ul').slimScroll({
+    color: '#fff',
+    size: '3px',
+    height: '150px'
+});*/
+
 });
 
 
