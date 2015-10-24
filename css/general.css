@@ -105,19 +105,15 @@ a[href^=tel]                  {     color:inherit !important; text-decoration:no
                                 border-radius: 50%;
                                 background: #545556;
                                 }
-.slider .slick-dots li button:before {
-                                display: none;
-                                }
-.slider .slick-dots li.slick-active button {
-                                background: #9E8B4C;
-                                }
+.slider .slick-dots li button:before {display: none; }
+.slider .slick-dots li.slick-active button {background: #9E8B4C;}
 
 
 
 .slide main                     {
                                 display: inline-block;
                                 vertical-align: middle;
-                                padding-top: 15%;
+                                padding-top: 47vh;
                                 margin: 0 auto;
                                 width: 760px;
                                 position: relative;
@@ -140,6 +136,7 @@ a[href^=tel]                  {     color:inherit !important; text-decoration:no
 .slide main h1                  {display: inline-block; vertical-align: middle;
                                 min-height: 120px;
                                 width: 100%;
+                                font-size: 40px; line-height: 40px;
                                 padding: 17px 40px 25px 40px;
                                 position: relative;
                                 background-image: url(../images/textBg.png);
@@ -169,6 +166,25 @@ a[href^=tel]                  {     color:inherit !important; text-decoration:no
                                 text-decoration: none;
                                 }
 .moreInfo img                   {display: inline-block; vertical-align: middle;}
+
+
+@media (max-width: 765px) {
+  .slide main                   {width: 100vw;}
+  .slide main h1                {width: 100%;
+                                padding: 17px 5.2vw 25px 5.2vw;
+                                font-size: 5.2vw; line-height: 5.2vw;
+                                min-height: auto;
+                                }
+}
+
+@media (max-width: 500px) {
+   .slide main h1:before        {width: 80px; height: 27px; top: -20px;}
+   .moreInfo                    {padding: 10px 20px 8px;}
+   .moreInfo span               {font-size: 18px;margin-right: 10px;}
+}
+@media (max-height: 650px) {
+  .slide main                   {padding-top: 30vh;}
+}
 /*---------------------------------------------------------------*/
 
 
