@@ -1,4 +1,40 @@
-﻿
+﻿@font-face {
+  font-family: 'Georgia-Bold';
+  src: url('../fonts/georgiab.eot');
+  src: url('../fonts/Georgia-Bold.woff') format('woff'),
+       url('../fonts/Georgia-Bold.ttf') format('truetype'),
+       url('../fonts/georgiab.eot?#iefix') format('embedded-opentype'),
+       url('../fonts/georgiab.woff2') format('woff2'),
+       url('../fonts/Georgia-Bold.svg#Georgia-Bold') format('svg');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Georgia-Italic';
+  src: url('../fonts/georgiai.eot');
+  src: url('../fonts/Georgia-Italic.woff') format('woff'),
+       url('../fonts/Georgia-Italic.ttf') format('truetype'),
+       url('../fonts/georgiai.eot?#iefix') format('embedded-opentype'),
+       url('../fonts/georgiai.woff2') format('woff2'),
+       url('../fonts/Georgia-Italic.svg#Georgia-Italic') format('svg');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Georgia-Regular';
+  src: url('../fonts/georgia.eot');
+  src: url('../fonts/Georgia.woff') format('woff'),
+       url('../fonts/Georgia.ttf') format('truetype'),
+       url('../fonts/georgia.eot?#iefix') format('embedded-opentype'),
+       url('../fonts/georgia.woff2') format('woff2'),
+       url('../fonts/Georgia.svg#Georgia') format('svg');
+  font-weight: normal;
+  font-style: normal;
+}
+
+
 /*General styles*/
 html, body                    {    height: 100%;}
 body                          {    margin: 0;
@@ -6,7 +42,7 @@ body                          {    margin: 0;
                                    -ms-overflow-x: hidden;
                                        overflow-x: hidden;
                                    max-width: 100%;
-                                   font-family: 'Georgia';}
+                                   font-family: 'Georgia-Regular';}
 
 p                             {    color: #000;}
 h1, h2, h3, h4, h5, p         {    margin: 0;}
@@ -96,6 +132,14 @@ a[href^=tel]                  {     color:inherit !important; text-decoration:no
                                             position: relative;
                                             z-index: 3;
                                         }
+/*.mainInfo h1:after                      { content: " ";
+                                          width: 3000px;
+                                          height: 1px;
+                                          background-color: rgba(255, 255, 255, 0.3);
+                                          position: absolute;
+                                          top: 49%;
+                                          right: 50%;
+                                          margin-right: -1500px;}*/
 .mainInfo h1:before                     {
                                             width: 120px;
                                             height: 40px;
@@ -155,7 +199,7 @@ a[href^=tel]                  {     color:inherit !important; text-decoration:no
 .moreInfo span                          {
                                             vertical-align: middle;
                                             font-size: 22px;
-                                            font-style: italic;
+                                            font-family: "Georgia-Italic";
                                             color: #000;
                                             text-decoration: none;
                                             -webkit-transition: all 0.3s;
@@ -179,46 +223,48 @@ a[href^=tel]                  {     color:inherit !important; text-decoration:no
 
 
         @media (max-width: 1200px) {
-            .slide main h1 br           { display: none;}
+            .slide .mainInfo h1 br           { display: none;}
         }
 
         @media (max-width: 765px)               { 
-            .slide main                 {width: 98%;}
-            .slide main h1              {width: 100%;
-                                        padding: 17px 5.2vw 25px 5.2vw;
-                                        font-size: 5.2vw;
-                                        line-height: 5.2vw;
-                                        min-height: auto;
-                                        }
+            .slide .mainInfo                 {width: 98%;}
+            .slide .mainInfo h1              {width: 100%;
+                                              padding: 17px 5.2vw 25px 5.2vw;
+                                              font-size: 5.2vw;
+                                              line-height: 5.2vw;
+                                              min-height: auto;
+                                              letter-spacing: 0;
+                                              }
             
         }
 
         @media (max-width: 500px)                 { 
-            .slide main h1:before       {width: 80px; height: 27px; top: -20px;}
-            .moreInfo                   {padding: 10px 20px 8px }
+            .slide .mainInfo h1:before       {width: 80px; height: 27px; top: -20px;}
+            .moreInfo                   {padding: 6px 20px 6px; width: auto;}
             .moreInfo span              {font-size: 18px;}
         }
         @media (max-width: 400px)                 { 
-            .moreInfo span              {font-size: 14px; padding: 8px 10px 6px;}
+            .moreInfo span              {font-size: 14px; padding: 6px 10px 6px;}
         }
 
         /*@media (max-height: 500px) and (orientation: landscape){
             .slide main h1              { font-size: 5.2vh; line-height: 5.2vh;}
             .moreInfo span              { font-size: 12px; margin-right: 5px; padding: 8px 10px 6px;}
         }*/
-        @media (max-height: 320px) and (orientation: landscape){
-            .slide main h1              { font-size: 6.2vh; line-height: 6.2vh;}
-            .moreInfo span              { font-size: 12px; margin-right: 5px; padding: 8px 10px 6px;}
+        @media (max-height: 320px) and (orientation: landscape) and (max-width: 600px) {
+            .slide .mainInfo h1              { font-size: 6.2vh; line-height: 6.2vh; padding: 17px 5.2vh;}
+            .moreInfo span                   { font-size: 12px; margin-right: 5px; padding: 6px 10px 6px;}
+            .slide .mainInfo h1:before       {  bottom: 92%; top: auto;}
         }
 
         @media (max-height: 750px)                 { 
-            .slide main                 {padding-top: 35vh;}
+            .slide .mainInfo                 {padding-top: 35vh;}
         }
         @media (max-height: 650px)                 { 
-            .slide main                 {padding-top: 30vh;}
+            .slide .mainInfo                 {padding-top: 30vh;}
         }
         @media (max-height: 400px)                 { 
-            .slide main                 {padding-top: 25vh;}
+            .slide .mainInfo                 {padding-top: 25vh;}
         }
 
 
