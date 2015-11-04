@@ -103,7 +103,34 @@ jQuery(document).ready(function($) {
     color: '#000',
     size: '3px',
     height: '100%'
-});
+  });
+
+  $('#img').mapster({
+    render_highlight: {
+        stroke: false,
+        altImage: 'images/flats/house-hover.jpg'
+    },
+    isSelectable: false,
+    clickNavigate: true
+  });
+
+
+  $('#fullpage').fullpage({
+    anchors: ['firstPage', 'secondPage', 'thirdPage'],
+    navigationTooltips: ['First', 'Second', 'Third'],
+    menu: '#myMenu',
+    slideSelector: '.fp-slide',
+    scrollOverflow: true,
+    responsiveWidth: 1200
+  });
+
+  $('.mini-slider').slick({
+    arrows: false,
+    dots: true,
+    autoplay: false,
+    fade: true,
+    autoplaySpeed: 4000
+  });
 
 });
 
