@@ -92,11 +92,10 @@ a[href^=tel]                  {     color:inherit !important; text-decoration:no
                                             -o-background-size: cover;
                                             background-size: cover;
                                         }
-.slide:nth-child(1)                     {    background-image: url(../images/slide-1.jpg) }
-.slide:nth-child(2)                     {    background-image: url(../images/slide-2.jpg) }
-.slide:nth-child(3)                     {    background-image: url(../images/slide-3.jpg) }
-.slide:nth-child(4)                     {    background-image: url(../images/slide-4.jpg) }
-.slide:nth-child(5)                     {    background-image: url(../images/slide-5.jpg) }
+@media (orientation: landscape) {
+  .slide                                {   background-position: 50% 0%;}
+}
+
 .slider .slick-dots                     {
                                             height: 40px;
                                             margin: 0;
@@ -168,6 +167,7 @@ a[href^=tel]                  {     color:inherit !important; text-decoration:no
                                             letter-spacing: -2px;
                                             font-variant: small-caps;
                                             line-height: 40px;
+                                            color: #000;
                                             padding: 17px 40px 25px 40px;
                                             position: relative;
                                             background-image: url(../images/textBg.png);
@@ -182,6 +182,19 @@ a[href^=tel]                  {     color:inherit !important; text-decoration:no
                                             -ms-transform:scale(0.85,0.97); /* IE 9+ */
                                             -o-transform:scale(0.85,0.97); /* Opera */
                                         }
+.mainInfo h1 .lft,
+.mainInfo h1 .rgt                       {   position: absolute;
+                                            display: block;
+                                            height: 1px;
+                                            margin-top: -3px;
+                                            top: 50%;
+                                            width: 50vw;
+                                            background-color: rgba(255, 255, 255, 0.3);
+                                        }
+
+.mainInfo h1 .lft                       {   right: 100%;}
+.mainInfo h1 .rgt                       {   left: 100%;}
+
 .moreInfo                               {
                                             display: inline-block;
                                             width: 250px;
@@ -223,28 +236,32 @@ a[href^=tel]                  {     color:inherit !important; text-decoration:no
 
 
         @media (max-width: 1200px) {
-            .slide .mainInfo h1 br           { display: none;}
+            .mainInfo h1 br           { display: none;}
         }
 
         @media (max-width: 765px)               { 
-            .slide .mainInfo                 {width: 98%;}
-            .slide .mainInfo h1              {width: 100%;
+            .mainInfo                 {width: 98%;}
+            .mainInfo h1              {width: 110%;
                                               padding: 17px 5.2vw 25px 5.2vw;
-                                              font-size: 5.2vw;
+                                              margin-left: -5%;
+                                              font-size: 5vw;
                                               line-height: 5.2vw;
-                                              min-height: auto;
+                                              min-height: 40px;
                                               letter-spacing: 0;
+                                              margin-bottom: -2px;
                                               }
-            
+            .mainInfo h1 .lft,
+            .mainInfo h1 .rgt         {   display: none;}
         }
 
         @media (max-width: 500px)                 { 
-            .slide .mainInfo h1:before       {width: 80px; height: 27px; top: -20px;}
+            .mainInfo h1:before         {display: none;}
             .moreInfo                   {padding: 6px 20px 6px; width: auto;}
             .moreInfo span              {font-size: 18px;}
         }
         @media (max-width: 400px)                 { 
             .moreInfo span              {font-size: 14px; padding: 6px 10px 6px;}
+            .mainInfo h1                {padding: 17px 5.2vw;}
         }
 
         /*@media (max-height: 500px) and (orientation: landscape){
@@ -252,19 +269,19 @@ a[href^=tel]                  {     color:inherit !important; text-decoration:no
             .moreInfo span              { font-size: 12px; margin-right: 5px; padding: 8px 10px 6px;}
         }*/
         @media (max-height: 320px) and (orientation: landscape) and (max-width: 600px) {
-            .slide .mainInfo h1              { font-size: 6.2vh; line-height: 6.2vh; padding: 17px 5.2vh;}
+            .mainInfo h1              { font-size: 6.2vh; line-height: 6.2vh; padding: 17px 5.2vh;}
             .moreInfo span                   { font-size: 12px; margin-right: 5px; padding: 6px 10px 6px;}
-            .slide .mainInfo h1:before       {  bottom: 92%; top: auto;}
+            .mainInfo h1:before       {  bottom: 92%; top: auto;}
         }
 
         @media (max-height: 750px)                 { 
-            .slide .mainInfo                 {padding-top: 35vh;}
+            .mainInfo                 {padding-top: 35vh;}
         }
         @media (max-height: 650px)                 { 
-            .slide .mainInfo                 {padding-top: 30vh;}
+            .mainInfo                 {padding-top: 30vh;}
         }
         @media (max-height: 400px)                 { 
-            .slide .mainInfo                 {padding-top: 25vh;}
+            .mainInfo                 {padding-top: 13vh;}
         }
 
 
@@ -278,7 +295,7 @@ header                           {
                                      left: 0;
                                      z-index: 10;
                                      padding: 0 6.25vw;
-                                     background-color: rgba(0, 0, 0, 0.85);
+                                     background-color: rgba(0, 0, 0, 0.70);
                                      text-align: center;
                                  }
 .logo                            {
@@ -356,16 +373,27 @@ nav li                           {
                                  }
 nav li a                         {
                                      color: #a7a9ac;
-                                     font-size: 18px;
-                                     font-variant: small-caps;
-                                     -webkit-transition: all 0.3s ease;
-                                     -o-transition: all 0.3s ease;
-                                     transition: all 0.3s ease;
+                                     font-size: 16px;
+                                     text-transform: uppercase;
+                                     font-weight: 100;
+                                     -webkit-transition: padding 0.3s;
+                                        -moz-transition: padding 0.3s;
+                                         -ms-transition: padding 0.3s;
+                                          -o-transition: padding 0.3s;
+                                             transition: padding 0.3s;
+                                     position: relative;
                                  }
+@-moz-document url-prefix() {
+  nav li a { font-size: 18px; font-variant: small-caps; text-transform: none;}
+}
+
+
+
 nav li a:hover                   {
                                      color: #ddd9ce;
                                      border-bottom: 1px solid #ddd9ce;
                                      padding-bottom: 3px;
+                                     top: -2px;
                                  }
 nav li:hover                     { }
 header .phone                    {
@@ -381,9 +409,11 @@ header .phone span               {
 
 
         @media (max-width: 1400px) {
-          nav li a                { font-size: 16px;}
+          nav li a                { font-size: 13px;}
           header .phone span      { font-size: 22px;}
-
+          @-moz-document url-prefix() {
+            nav li a { font-size: 16px; font-variant: small-caps; text-transform: none;}
+          }
         }
 
         @media (max-width: 1200px) {
@@ -407,9 +437,9 @@ header .phone span               {
           .logo                   { width: 200px;}
           header .phone           { display: none;}
           header                  { text-align: right;}
-          nav .menu               { margin-left: 0; right: -6.25vw; left: auto; width: 320px;}
+          nav .menu               { margin-left: 0; right: -6.25vw; left: auto; width: 100vw;}
           nav ul li               { width: 50%; margin: 0 -2px;}
-          nav ul li a:hover       { padding: 12px 0; background-color: #000; border: none;}
+          nav ul li a:hover       { padding: 12px 0; background-color: #000; border: none; top: 0;}
         }
 
         @media (max-height: 320px) and (orientation: landscape) {

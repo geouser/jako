@@ -65,7 +65,8 @@ jQuery(document).ready(function($) {
   $('.slider').slick({
     arrows: false,
     dots: true,
-    fade: true
+    autoplay: false,
+    autoplaySpeed: 4000
   });
 /*-----------------------------------------------------------------*/  
   $('.magnific').magnificPopup({
