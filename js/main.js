@@ -99,11 +99,11 @@ jQuery(document).ready(function($) {
     $(this).siblings('.menu').fadeToggle('fast');
   });
 
- /* $('.menu ul').slimScroll({
-    color: '#fff',
+  $('.slim').slimScroll({
+    color: '#000',
     size: '3px',
-    height: '150px'
-});*/
+    height: '100%'
+});
 
 });
 
