@@ -638,7 +638,7 @@ header .phone span               {
                                   background-repeat: no-repeat;
                                   background-size: cover;
                                   background-position: 50% 50%;}
-#myMenu                         { position: absolute;
+#myMenu                         { position: fixed;
                                   right: 0;
                                   top: 50%;
                                   height: 160px;
@@ -746,7 +746,7 @@ header .phone span               {
 #about .section-3 .wrap         { display: inline-block; vertical-align: middle; text-align: center; width: 100%;}
 
 #about .section-2 .box          { width: 480px; margin-bottom: 1px; display: inline-block; text-align: center; vertical-align: top;}
-#about .section-3 .box          { width: 320px; margin-bottom: 1px; display: inline-block; text-align: center; vertical-align: top;}
+#about .section-3 .box          { width: 410px; margin-bottom: 1px; display: inline-block; text-align: center; vertical-align: top;}
 
 #about .mini-slider,
 #about .text-block   {width: 87.5%; display: inline-block;}

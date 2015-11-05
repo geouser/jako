@@ -121,7 +121,8 @@ jQuery(document).ready(function($) {
     menu: '#myMenu',
     slideSelector: '.fp-slide',
     scrollOverflow: true,
-    responsiveWidth: 1200
+    responsiveWidth: 1200,
+    responsiveHeight: 650
   });
 
   $('.mini-slider').slick({
