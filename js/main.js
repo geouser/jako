@@ -69,6 +69,8 @@ jQuery(document).ready(function($) {
     autoplaySpeed: 4000
   });
 
+
+
 /*-----------------------------------------------------------------*/  
   $('.magnific').magnificPopup({
     type: 'inline',
@@ -106,15 +108,10 @@ jQuery(document).ready(function($) {
     height: '100%'
   });
 
-  $('#img').mapster({
-    render_highlight: {
-        stroke: false,
-        altImage: 'images/flats/house-hover.jpg'
-    },
-    isSelectable: false,
-    clickNavigate: true
-  });
 
+
+  $('.MapImg').maphilight();
+  $('img[usemap]').rwdImageMaps();
 
   $('#fullpage').fullpage({
     anchors: ['firstPage', 'secondPage', 'thirdPage'],
