@@ -789,8 +789,12 @@ header .phone span               {
                                         bottom: -25px;
                                         background-color: #000;
                                         left: 0;}
-#about .section-2 .text-block p   { font-size: 16px; margin-top: 50px;}
+#about .section-2 .text-block p   { font-size: 16px; margin-top: 50px; font-family: 'Times New Roman'}
 
+
+@media (max-height: 850px) {
+  .mini-slider .slide             { height: 250px;}
+}
 @media (max-width: 1200px) {
   #about .section-2 .fp-tableCell { padding-top: 75px; padding-bottom: 75px;}
 }
