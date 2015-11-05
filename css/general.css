@@ -662,7 +662,7 @@ header .phone span               {
                                           vertical-align: middle;}
 #myMenu li.active a             { width: 12px; height: 12px; background-color: #9E8B4C;}
 
-#about .section-1 .content      {width: 100%;
+.section-1.full-section .content{width: 100%;
                                   background-color: rgba(0,0,0,0.4);
                                   height: auto;
                                   position: absolute;
@@ -671,7 +671,7 @@ header .phone span               {
                                   right: 0;
                                   text-align: center;
                                   padding: 30px 0;}
-#about .section-1 h1            { font-size: 40px;
+.section-1.full-section h1      { font-size: 40px;
                                   font-weight: normal;
                                   color: #fff;
                                   line-height: 35px;
@@ -683,7 +683,7 @@ header .phone span               {
                                   -moz-transform:scale(0.85,0.97); /* Firefox */
                                   -ms-transform:scale(0.85,0.97); /* IE 9+ */
                                   -o-transform:scale(0.85,0.97); /* Opera */}
-#about .section-1 h1:after      { content: " ";
+.section-1.full-section h1:after { content: " ";
                                   width: 68px;
                                   height: 1px;
                                   position: absolute;
@@ -692,7 +692,7 @@ header .phone span               {
                                   opacity: 0.6;
                                   left: 50%;
                                   margin-left: -34px;}
-#about .section-1 h1:before     { content: " ";
+.section-1.full-section h1:before{ content: " ";
                                   width: 124px;
                                   height: 40px;
                                   position: absolute;
@@ -703,7 +703,7 @@ header .phone span               {
                                   top: -71px;
                                   left: 50%;
                                   margin-left: -62px;}
-#about .section-1 .more         { width: 220px;
+.section-1.full-section .more   { width: 220px;
                                   height: 54px;
                                   background-color: #DDD9CE;
                                   color: #000;
@@ -717,9 +717,9 @@ header .phone span               {
                                           transition: all 0.3s ease;
                                   -webkit-background-clip: padding-box;
                                           background-clip: padding-box;}
-#about .section-1 .more:hover   { background-color: #C1BEB4;}
-#about .section-1 .more:before  { margin: 0;}
-#about .section-1 .down-arrow   { width: 57px;
+.section-1.full-section .more:hover   { background-color: #C1BEB4;}
+.section-1.full-section .more:before  { margin: 0;}
+.section-1.full-section .down-arrow   { width: 57px;
                                   height: 14px;
                                   display: block;
                                   margin: 0 auto;
@@ -739,16 +739,24 @@ header .phone span               {
     width: 100%;
     height: 100%;
 }
-#about .section-2 .fp-tableCell { padding-top: 100px;}
-#about .section-2 .wrap         { display: inline-block; vertical-align: middle; text-align: center; width: 100%;}
-#about .section-2 .box          { width: 480px; margin-bottom: 1px; display: inline-block; text-align: center; vertical-align: top;}
+#about .section-2 .fp-tableCell,
+#about .section-3 .fp-tableCell { padding-top: 100px;}
 
-#about .section-2 .mini-slider,
-#about .section-2 .text-block   {width: 87.5%; display: inline-block;}
+#about .section-2 .wrap,
+#about .section-3 .wrap         { display: inline-block; vertical-align: middle; text-align: center; width: 100%;}
+
+#about .section-2 .box          { width: 480px; margin-bottom: 1px; display: inline-block; text-align: center; vertical-align: top;}
+#about .section-3 .box          { width: 320px; margin-bottom: 1px; display: inline-block; text-align: center; vertical-align: top;}
+
+#about .mini-slider,
+#about .text-block   {width: 87.5%; display: inline-block;}
 
 .mini-slider .slide             { width: 100%;
                                   height: 315px;
-                                  border-radius: 25px;}
+                                  border-radius: 25px;
+                                  background-size: cover;
+                                  background-repeat: no-repeat;
+                                  background-position: 50% 50%;}
 
 .mini-slider .slick-dots        { top: 100%; margin-top: -15px;}
 .mini-slider .slick-dots li     { display: inline-block;
@@ -773,8 +781,8 @@ header .phone span               {
 
 
 
-#about .section-2 .text-block    { text-align: left;}
-#about .section-2 .text-block h3 { font-size: 30px;
+#about .text-block    { text-align: left;}
+#about .text-block h3 { font-size: 30px;
                                     font-variant: small-caps;
                                     line-height: 32px;
                                     font-weight: normal;
@@ -782,14 +790,14 @@ header .phone span               {
                                     display: inline-block;
                                     position: relative;
                                     letter-spacing: -0.5px;}
-#about .section-2 .text-block h3:after {content: " ";
+#about .text-block h3:after {content: " ";
                                         width: 66px;
                                         height: 1px;
                                         position: absolute;
                                         bottom: -25px;
                                         background-color: #000;
                                         left: 0;}
-#about .section-2 .text-block p   { font-size: 16px; margin-top: 50px; font-family: 'Times New Roman'}
+#about .text-block p   { font-size: 16px; margin-top: 50px; font-family: 'Times New Roman'}
 
 
 @media (max-height: 850px) {
