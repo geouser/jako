@@ -101,8 +101,8 @@ a[href^=tel]                  {     color:inherit !important; text-decoration:no
                                             background-size: cover;
                                             position: relative;
                                         }
-.interier .slider    .slick-next,
-.interier .slider    .slick-prev        {   z-index: 10; top: 73%;
+.slider    .slick-next,
+.slider    .slick-prev        {   z-index: 10; top: 73%;
                                             height: 55px; width: 15px;
                                             background-position: 50% 50%;
                                             background-repeat: no-repeat;
@@ -110,14 +110,20 @@ a[href^=tel]                  {     color:inherit !important; text-decoration:no
                                                  -o-background-size: 100% 100%;
                                                     background-size: 100% 100%;
                                         }
-.interier .slider    .slick-next:before,
-.interier .slider    .slick-prev:before {   display: none;}
-.interier .slider    .slick-next        {   right: 5%; background-image: url(../images/next.png);}
-.interier .slider    .slick-prev        {   left: 5%; background-image: url(../images/prev.png);}
+.slider    .slick-next:before,
+.slider    .slick-prev:before {   display: none;}
+.slider    .slick-next        {   right: 5%; background-image: url(../images/next.png);}
+.slider    .slick-prev        {   left: 5%; background-image: url(../images/prev.png);}
 .slider.section-1.full-section .content        {background-color: rgba(0,0,0, 0.5);
                                                 padding: 10px 0 60px 0;
                                                } 
 .slider.section-1.full-section h1::before   {top: -50.9px;}
+
+
+.flats .slider    .slick-next,
+.flats .slider    .slick-prev         {top: 30%}
+.flats  .slider    .slick-next        {   right: 5%; background-image: url(../images/next-dark.png);}
+.flats  .slider    .slick-prev        {   left: 5%; background-image: url(../images/prev-dark.png);}
 
 @media (orientation: landscape) {
   .slide                                {   background-position: 50% 0%;}
@@ -478,7 +484,14 @@ header .phone span               {
 
 
 
+/*---------------------------------------------------------------*/
+/*----------------------   floor info    -------------------------*/
+/*----------------------      PAGE      -------------------------*/
+/*---------------------------------------------------------------*/
+.floor-info                       { display: inline-block; vertical-align: middle;}
+.floor-nav                        { display: inline-block; vertical-align: middle;}
 
+.MapImg                           {width: 40vw !important; height: 30vw !important; background-size: 100% 100% !important;}
 /*---------------------------------------------------------------*/
 /*----------------------    CONTACTS    -------------------------*/
 /*----------------------      PAGE      -------------------------*/

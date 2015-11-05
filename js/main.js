@@ -69,6 +69,8 @@ jQuery(document).ready(function($) {
     autoplaySpeed: 4000
   });
 
+
+
 /*-----------------------------------------------------------------*/  
   $('.magnific').magnificPopup({
     type: 'inline',
@@ -170,6 +172,28 @@ jQuery(document).ready(function($) {
     $(this).siblings('.menu').fadeToggle('fast');
   });
 
+<<<<<<< HEAD
+  $('.slim').slimScroll({
+    color: '#000',
+    size: '3px',
+    height: '100%'
+  });
+
+
+
+  $('.MapImg').maphilight();
+  $('img[usemap]').rwdImageMaps();
+
+  $('#fullpage').fullpage({
+    anchors: ['firstPage', 'secondPage', 'thirdPage'],
+    navigationTooltips: ['First', 'Second', 'Third'],
+    menu: '#myMenu',
+    slideSelector: '.fp-slide',
+    scrollOverflow: true,
+    responsiveWidth: 1200,
+    responsiveHeight: 650
+  });
+=======
   if ($('.slim').length > 0) {
     $('.slim').slimScroll({
       color: '#000',
@@ -209,6 +233,7 @@ jQuery(document).ready(function($) {
     });
   };
   
+>>>>>>> 114a81f2c3989f3897ebc8cdbf5a250ab05fcc3c
 
   $('.mini-slider').slick({
     arrows: false,
