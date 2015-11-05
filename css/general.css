@@ -99,7 +99,26 @@ a[href^=tel]                  {     color:inherit !important; text-decoration:no
                                             -webkit-background-size: cover;
                                             -o-background-size: cover;
                                             background-size: cover;
+                                            position: relative;
                                         }
+.interier .slider    .slick-next,
+.interier .slider    .slick-prev        {   z-index: 10; top: 73%;
+                                            height: 55px; width: 15px;
+                                            background-position: 50% 50%;
+                                            background-repeat: no-repeat;
+                                            -webkit-background-size: 100% 100%;
+                                                 -o-background-size: 100% 100%;
+                                                    background-size: 100% 100%;
+                                        }
+.interier .slider    .slick-next:before,
+.interier .slider    .slick-prev:before {   display: none;}
+.interier .slider    .slick-next        {   right: 5%; background-image: url(../images/next.png);}
+.interier .slider    .slick-prev        {   left: 5%; background-image: url(../images/prev.png);}
+.slider.section-1.full-section .content        {background-color: rgba(0,0,0, 0.5);
+                                                padding: 10px 0 60px 0;
+                                               } 
+.slider.section-1.full-section h1::before   {top: -50.9px;}
+
 @media (orientation: landscape) {
   .slide                                {   background-position: 50% 0%;}
 }
@@ -662,7 +681,7 @@ header .phone span               {
                                           vertical-align: middle;}
 #myMenu li.active a             { width: 12px; height: 12px; background-color: #9E8B4C;}
 
-.section-1.full-section .content{width: 100%;
+.section-1.full-section .content {width: 100%;
                                   background-color: rgba(0,0,0,0.4);
                                   height: auto;
                                   position: absolute;

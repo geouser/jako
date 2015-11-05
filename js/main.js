@@ -63,11 +63,12 @@ $(function(){
 jQuery(document).ready(function($) {
 
   $('.slider').slick({
-    arrows: false,
+    arrows: true,
     dots: true,
     autoplay: false,
     autoplaySpeed: 4000
   });
+
 /*-----------------------------------------------------------------*/  
   $('.magnific').magnificPopup({
     type: 'inline',
