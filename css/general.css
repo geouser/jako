@@ -630,6 +630,47 @@ header .phone span               {
 }
 
 
+/*---------------------------------------------------------------*/
+/*----------------------      MAP       -------------------------*/
+/*----------------------      PAGE      -------------------------*/
+/*---------------------------------------------------------------*/
+#map                                 { height: 100%; width: 100%; position: relative;}
+#map .map-wrap                       { width: 100%; height: 100%; position: absolute; top: 0; left: 0;}
+#map-canvas                          { height: 100%; width: 100%;}
+.tooltip                             { display: inline-block; vertical-align: middle; width: 50%; text-align: center; padding-top: 100px;}
+.tooltip .box                        { display: none;
+                                        width: 370px;
+                                        position: relative;
+                                        z-index: 10;
+                                        padding-bottom: 15px;
+                                        text-align: left;
+                                        background-color: rgba(255,255,255,0.85);
+                                        border-radius: 35px;
+                                        border: 10px solid rgba(156,137,76,0.3);
+                                        -webkit-background-clip: padding-box;
+                                                background-clip: padding-box;}
+.tooltip .text-block                 { text-align: left; padding: 10px 15px;}
+.tooltip .text-block h3              { font-size: 30px;
+                                       font-variant: small-caps;
+                                       line-height: 20px;
+                                       font-weight: normal;
+                                       text-align: left;
+                                       display: inline-block;
+                                       position: relative;
+                                       letter-spacing: -0.5px;}
+.tooltip .text-block h3 span         { font-size: 16px; font-variant: normal; display: inline-block;}
+.tooltip .text-block h3:after        {content: " ";
+                                       width: 66px;
+                                       height: 1px;
+                                       position: absolute;
+                                       bottom: -25px;
+                                       background-color: #000;
+                                       left: 0;}
+.tooltip .text-block p               { font-size: 16px; margin-top: 50px; font-family: 'Times New Roman'}
+
+
+
+
 
 /*---------------------------------------------------------------*/
 /*----------------------      ABOUT     -------------------------*/

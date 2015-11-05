@@ -21,8 +21,8 @@
         <link rel="stylesheet" href="css/normalize-main.css">
         <link rel="stylesheet" href="css/general.css">
     </head>
-
     <body>
+
         <header class="vertical">
             <div class="logo vertical">
                 <img src="images/logo.png" alt="">
@@ -42,7 +42,7 @@
                         <li><a href="#">История</a></li>
                         <li><a href="flats.html">Выбор квартир</a></li>
                         <li><a href="#">Интерьеры</a></li>
-                        <li><a href="#">Контакты</a></li>
+                        <li><a href="contacts.html">Контакты</a></li>
                     </ul>
                 </div>
             </nav> <!-- end navigation -->
@@ -50,28 +50,51 @@
             <a href="tel:78122442010" class="phone vertical"><span>+7 812 244 20 10</span></a>
         </header> <!-- end header -->
 
-  	    <!-- //////////////////////////////////////////////////////////////////////// -->
-        <div id="contacts">
-            <div class="feedback">
-                <div class="inner-block slim">
-                    <div class="engel-logo">
-                        <img src="images/contacts/engel-logo.png" alt="">
-                    </div>
-                    <p>Свяжитеcь с нами, чтобы получить подробную информацию или приезжайте в наш офис продаж.</p>
-                    <a href="tel:78122440999" class="phone-num"><span>+7 812 244 09 99</span></a>
-                    <form action="#">
-                        <p>Форма обратной связи</p>
-                        <input type="text" name="name" placeholder="Ваше имя">
-                        <input type="text" name="email" placeholder="E-mail">
-                        <textarea name="msg" placeholder="Введите текст сообщения"></textarea>
-                        <button>Отправить</button>
-                    </form>
-                    <p>Мы находимся по адресу<img src="images/contacts/arrow.png" alt=""></p>
-                    <address>197110, г. Санкт-Петербург, Морской пр., 28</address>
-                </div>
+        <div id="map" class="vertical">
+            <div class="map-wrap">
+                <div id="map-canvas"></div>
             </div>
-            <div class="flat-image"></div>
+
+            <div class="tooltip">
+                <div class="box box-1">
+                    <div class="mini-slider">
+                        <div class="slide" style="background-image: url(images/about/art-1-slide-1.jpg)"></div>
+                        <div class="slide" style="background-image: url(images/about/art-1-slide-1.jpg)"></div>
+                        <div class="slide" style="background-image: url(images/about/art-1-slide-1.jpg)"></div>
+                    </div>
+                    <div class="text-block mini-slim">
+                        <h3>Дом ЖАКО</h3>
+                        <p>Небольшой абзац, раскрывающий суть блока. Это разновидность текста, который по умолчанию должен присутствовать на корпоратив- ном сайте.</p>
+                    </div>
+                </div>
+                <div class="box box-2">
+                    <div class="mini-slider">
+                        <div class="slide" style="background-image: url(images/map/rest.jpg)"></div>
+                        <div class="slide" style="background-image: url(images/map/rest.jpg)"></div>
+                        <div class="slide" style="background-image: url(images/map/rest.jpg)"></div>
+                    </div>
+                    <div class="text-block mini-slim">
+                        <h3>Расторан<br><span>Расстояние 350м</span></h3>
+                        <p>Небольшой абзац, раскрывающий суть блока. Это разновидность текста, который по умолчанию должен присутствовать на корпоратив- ном сайте.</p>
+                    </div>
+                </div>
+                <div class="box box-3">
+                    <div class="mini-slider">
+                        <div class="slide" style="background-image: url(images/map/park.jpg)"></div>
+                        <div class="slide" style="background-image: url(images/map/park.jpg)"></div>
+                        <div class="slide" style="background-image: url(images/map/park.jpg)"></div>
+                    </div>
+                    <div class="text-block mini-slim">
+                        <h3>Парк<br><span>Расстояние 450м</span></h3>
+                        <p>Небольшой абзац, раскрывающий суть блока. Это разновидность текста, который по умолчанию должен присутствовать на корпоратив- ном сайте.</p>
+                    </div>
+                </div>
+            </div> <!-- end tooltip -->
+
+            <div class="panorams"></div>
         </div>
+  	    <!-- //////////////////////////////////////////////////////////////////////// -->
+
 
         <div id="modal-popup" class="mfp-hide zoom-anim-dialog"></div>
 
@@ -84,8 +107,6 @@
 
         <script src="js/slick.min.js"></script>
         <script src="js/jquery.magnific-popup.min.js"></script>
-        <script src="js/jquery.imagemapster.js"></script>
-        <script src="js/jquery.fullPage.min.js"></script>
 
         <script src="js/jquery.slimscroll.min.js"></script>
         <script src="js/main.js"></script>
