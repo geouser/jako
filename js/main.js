@@ -172,28 +172,15 @@ jQuery(document).ready(function($) {
     $(this).siblings('.menu').fadeToggle('fast');
   });
 
-<<<<<<< HEAD
-  $('.slim').slimScroll({
-    color: '#000',
-    size: '3px',
-    height: '100%'
-  });
 
+  /*if ($('.MapImg').length > 0) {
+    $('.MapImg').maphilight();
+  };*/
 
+  if ($('img[usemap]').length > 0) {
+    $('img[usemap]').rwdImageMaps();
+  };
 
-  $('.MapImg').maphilight();
-  $('img[usemap]').rwdImageMaps();
-
-  $('#fullpage').fullpage({
-    anchors: ['firstPage', 'secondPage', 'thirdPage'],
-    navigationTooltips: ['First', 'Second', 'Third'],
-    menu: '#myMenu',
-    slideSelector: '.fp-slide',
-    scrollOverflow: true,
-    responsiveWidth: 1200,
-    responsiveHeight: 650
-  });
-=======
   if ($('.slim').length > 0) {
     $('.slim').slimScroll({
       color: '#000',
@@ -201,6 +188,7 @@ jQuery(document).ready(function($) {
       height: '100%'
     });
   };
+
   if ($('.mini-slim').length > 0) {
     $('.mini-slim').slimScroll({
       color: '#000',
@@ -212,7 +200,7 @@ jQuery(document).ready(function($) {
   if ($('#img').length > 0) {
     $('#img').mapster({
       render_highlight: {
-          stroke: false,
+          stroke: true,
           altImage: 'images/flats/house-hover.jpg'
       },
       isSelectable: false,
@@ -226,14 +214,12 @@ jQuery(document).ready(function($) {
       navigationTooltips: ['First', 'Second', 'Third'],
       menu: '#myMenu',
       slideSelector: '.fp-slide',
-      scrollOverflow: true,
+      scrollOverflow: false,
       responsiveWidth: 1200,
-      responsiveHeight: 650,
+      responsiveHeight: 750,
       normalScrollElements: '.mini-slim'
     });
   };
-  
->>>>>>> 114a81f2c3989f3897ebc8cdbf5a250ab05fcc3c
 
   $('.mini-slider').slick({
     arrows: false,
