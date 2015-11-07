@@ -94,6 +94,8 @@ jQuery(document).ready(function($) {
     $.magnificPopup.close();
   });
 
+$('#Map area').magnificPopup();
+
 
 /********************************************************************************************/
 //-------------------------Google Карта география производства ---------------------------------
@@ -170,6 +172,12 @@ jQuery(document).ready(function($) {
 /***********************************************************************/
 
 
+  $(".floor-nav ul li").click(function(e){
+      e.preventDefault();
+      slideIndex = $(this).index();
+      $('.slider').slick('slickGoTo', slideIndex);
+  });
+
   /*Toggle menu with .menu-button*/
   $('.menu-button').on('click', function(event) {
     event.preventDefault();
@@ -177,21 +185,30 @@ jQuery(document).ready(function($) {
     $(this).siblings('.menu').fadeToggle('fast');
   });
 
-
-  /*if ($('.MapImg').length > 0) {
-    $('.MapImg').maphilight();
-  };*/
-
-  if ($('img[usemap]').length > 0) {
-    $('img[usemap]').rwdImageMaps();
-  };
-
   if ($('.slim').length > 0) {
     $('.slim').slimScroll({
       color: '#000',
       size: '3px',
       height: '100%'
     });
+  };
+  
+
+  /*if ($('img[usemap]').length > 0) {
+    $('img[usemap]').rwdImageMaps();
+  };*/
+  
+  if ($('.MapImg').length > 0) {
+    $(function () {
+        var data = {};
+        $('.MapImg').maphilight({
+        fillColor: '928148',
+        strokeColor: 'rgba(152,136,83, 0.5)',
+        fillOpacity: 0.5
+      });
+        data.alwaysOn = true;
+        $('area[alt="sold"]').data('maphilight', data).trigger('alwaysOn.maphilight');
+    });  
   };
 
   if ($('.mini-slim').length > 0) {
@@ -206,10 +223,25 @@ jQuery(document).ready(function($) {
     $('#img').mapster({
       render_highlight: {
           stroke: true,
-          altImage: 'images/flats/house-hover.jpg'
+          strokeWidth: 3,
+          strokeColor: 'ffffff',
+          fill: true,
+          fillColor: 'ffffff',
+          fillOpacity: 0.5
       },
       isSelectable: false,
       clickNavigate: true
+    });
+
+    var wd = $(window).width();
+    var imght = $('#img').height()
+    $('.map-wrap').css('margin-top', '-' + (imght/2) + 'px');
+
+    $(window).resize(function(event) {
+      wd = $(this).width();
+      imght = $('#img').height()
+      $('#img').mapster('resize',wd,imght,0); 
+      $('.map-wrap').css('margin-top', '-' + (imght/2) + 'px');
     });
   };
 
@@ -226,13 +258,32 @@ jQuery(document).ready(function($) {
     });
   };
 
-  $('.mini-slider').slick({
-    arrows: false,
-    dots: true,
-    autoplay: false,
-    fade: true,
-    autoplaySpeed: 4000
-  });
+  if ($('.mini-slider').length > 0) {
+    $('.mini-slider').slick({
+      arrows: false,
+      dots: true,
+      autoplay: false,
+      fade: true,
+      autoplaySpeed: 4000
+    });
+  };
+
+
+ if($('#Map')) {
+        $('#Map area').each(function() {
+            var id = $(this).attr('id');
+            $(this).mouseover(function() {
+                $(this).parent().siblings('.tip-'+id).show();
+            });
+
+            $(this).mouseout(function() {
+                var id = $(this).attr('id');
+                $(this).parent().siblings('.tip-'+id).hide();
+            });
+
+        });
+    }
+
 
 });
 

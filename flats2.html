@@ -49,31 +49,118 @@
 
             <a href="tel:78122442010" class="phone vertical"><span>+7 812 244 20 10</span></a>
         </header> <!-- end header -->
+        
+        <a href="#" class="back-to">Вернуться к фасаду</a>
+        
+        <div class="slider section-1 full-section" style='background-image: url("images/comp.png"), url("images/about/sun.png"), url("images/flats-bg.jpg")'>
 
-
-        <div class="slider section-1 full-section" style='background-image: url("images/flats-bg.jpg");'>
 
             <div class="slide vertical"> 
-                <div class="floor-info">
-                    <h2>Второй этаж</h2>
-                    <p class="all-flats">Всего: 9 квартир.<span>Свободно: 3 квартры</span></p>
-                    <img src="images/floor.png" alt="" usemap="#MapImg" class="MapImg" />
-                    <map name="MapImg" id="MapImg">
-                        <area shape="poly" alt="" title="" coords="2,0,56,-2,58,23,249,22,249,185,93,185,93,100,93,95,58,95,58,71,32,70,32,54,2,55,2,55" href="" target="" />
-                        <area shape="poly" alt="" title="" coords="252,19,468,19,470,275,358,274,355,186,253,186,253,184" href="" target="" />
-                        <area shape="poly" alt="" title="" coords="473,507,359,503,357,273,468,276" href="" target="" />
-                    </map>
-                </div>
-                <ul class="floor-nav">
-                    <p>Можете выбрать другой этаж</p>
-                    <li><a href="">Первый этаж</a></li>
-                </ul>
-            </div>
 
-            
-            <div class="slide vertical">
-               
-            </div>
+                <div class="slide-floor-info">
+                    <div class="floor-info">
+                        <h2>Второй этаж</h2>
+                        <p class="all-flats">Всего: 9 квартир.<span>Свободно: 3 квартры</span></p>
+
+                        <img src="images/floor.png" height="509" width="476" alt="" usemap="#Map" class="MapImg"/>
+                        <map name="Map" id="Map"> 
+                            <area alt="" title="" href="#floor-1-flat-1" shape="poly" coords="252,17,66,17,64,1,1,2,3,55,30,56,31,70,55,72,56,99,91,99,94,188,253,187" id="f1" />
+                            <area alt="" title="" href=".about-flat" shape="poly" coords="258,188,356,187,356,275,476,273,476,17,256,16" id="f2"/>
+                            <area shape="poly" alt="sold" title="" href=".about-flat"  coords="356,508,476,507,476,276,356,277" id="f3"/>
+                        </map><!-- end map  -->
+
+                        <div class="area-tip tip-f1">
+                            <div class="flat-number">
+                                3
+                            </div>
+                            <div class="flat-status">
+                                <span>Свободна</span>
+                                23м<sup>2</sup>
+                            </div>
+                        </div><!-- end area-tip f1 -->
+
+                        <div class="area-tip tip-f2">
+                            <div class="flat-number">
+                                6
+                            </div>
+                            <div class="flat-status">
+                                <span>Свободна</span>
+                                23м<sup>2</sup>
+                            </div>
+                        </div><!-- end area-tip f2 -->
+                        
+                        <div class="area-tip tip-f3">
+                            <div class="flat-number">
+                                5
+                            </div>
+                            <div class="flat-status">
+                                <span>Свободна</span>
+                                23м<sup>2</sup>
+                            </div>
+                        </div><!-- end area-tip f3 -->
+
+                    </div>
+
+                    <div class="floor-nav">
+                        <span>Можете выбрать <br> другой этаж:</span>
+                        <ul>
+                            <li>Первый этаж</li>
+                            <li>Второй этаж</li>
+                            <li>Третий этаж</li>
+                            <li>Четвертый этаж</li>
+                            <li>Пятый этаж</li>
+                            <li>Шестой этаж</li>
+                        </ul>
+                    </div><!-- end floor-nav -->
+
+                    <div class="about-flat mfp-hide" id="floor-1-flat-1">
+                        <div class="left">
+                            <img src="images/flats/flat-plan.png" alt="">
+                            <img src="images/flats/flat-plan-lt.png" alt="">
+                        </div>
+                        <div class="right">
+                            <h3>
+                                Второй этаж
+                            </h3>
+                            <span>Двухкомнатная квартира</span>
+                             <table style="width:100%">
+                              <tr>
+                                <th>Площадь квартиры</th>
+                                <th>Площадь балкона</th>
+                                <th>Кол-во спальных</th>
+                                <th>Кол-во ванных</th>
+                              </tr>
+                              <tr>
+                                <td>245.5 м2</td>
+                                <td>55.5 м2</td>
+                                <td>2 шт.</td>
+                                <td>1 шт.</td>
+                              </tr>
+                            </table> 
+                            <div class="flat-gallery">
+                                <div class="mini-slider">
+                                    <div class="slide" style="background-image: url(images/about/art-3-slide-1.jpg)"></div>
+                                    <div class="slide" style="background-image: url(images/about/art-3-slide-1.jpg)"></div>
+                                    <div class="slide" style="background-image: url(images/about/art-3-slide-1.jpg)"></div>
+                                    <div class="slide" style="background-image: url(images/about/art-3-slide-1.jpg)"></div>  
+                                </div>
+                            </div>
+                            <button>
+                                Оставить заявку
+                            </button>    
+                        </div>
+                    </div><!-- end about-flat popup -->
+                
+                </div>
+
+            </div><!-- === end slide-1 === -->
+
+
+            <div class="slide vertical"> 
+
+                
+
+            </div><!-- === end slide-2 === -->
 
         </div><!-- end slider -->
 
@@ -84,11 +171,11 @@
 
         <script src="js/vendor/modernizr.js"></script>
         <script src="js/vendor/jquery-1.11.3.min.js"></script>
-        <script type="text/javascript" src="js/jquery.maphilight.min.js"></script>
-        <script type="text/javascript" src="js/jquery.rwdImageMaps.min.js"></script>
        
         <script src="js/viewport.js"></script>
         <script src="js/vunit-maxheight.js"></script>
+        <script src="js/jquery.maphilight.min.js"></script>
+        <script src="js/jquery.rwdImageMaps.min.js"></script>
 
         <script src="js/slick.min.js"></script>
         <script src="js/jquery.magnific-popup.min.js"></script>
