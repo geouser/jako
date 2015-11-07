@@ -144,7 +144,7 @@ a[href^=tel]                  {     color:inherit !important; text-decoration:no
   .slide                                {   background-position: 50% 0%;}
 }
 
-.slider .slick-dots                     {
+.slider>.slick-dots                     {
                                             height: 40px;
                                             margin: 0;
                                             bottom: 0px;
@@ -156,19 +156,19 @@ a[href^=tel]                  {     color:inherit !important; text-decoration:no
                                             -o-background-size: auto 100%;
                                             background-size: auto 100%;
                                         }
-.slick-dots li                          {
+.slider>.slick-dots li                          {
                                             height: 12px;
                                             width: 12px;
                                             margin: 0 10px;
                                         }
-.slider .slick-dots li button           {
+.slider>.slick-dots li button           {
                                             width: 100%;
                                             height: 100%;
                                             border-radius: 50%;
                                             background: #545556;
                                         }
-.slider .slick-dots li button:before    {   display: none;}
-.slider .slick-dots li.slick-active button
+.slider>.slick-dots li button:before    {   display: none;}
+.slider>.slick-dots li.slick-active button
                                         {    background: #9E8B4C }
 .mainInfo                               {
                                             display: inline-block;
@@ -504,7 +504,6 @@ header .phone span               {
 /*----------------------      PAGE      -------------------------*/
 /*---------------------------------------------------------------*/
 .flats .slider                          {
-                                            height: auto;
                                             padding-top: 100px;
                                             position: relative;
                                             background-position: 5% 95%, 99% 97%, 50% 50%;
@@ -514,8 +513,8 @@ header .phone span               {
                                             background-size: auto, auto, cover;
                                         }
 .flats .slider 
-.flats .slider .slick-dots              {    padding-top: 7px }
-.flats .slider .slick-dots:before       {
+.flats .slider>.slick-dots              {    padding-top: 7px }
+.flats .slider>.slick-dots:before       {
                                             content: "Этажы:";
                                             display: inline-block;
                                             vertical-align: middle;
@@ -527,20 +526,20 @@ header .phone span               {
                                             -ms-transform: scale(0.85,0.97); /* IE 9+ */
                                             -o-transform: scale(0.85,0.97); /* Opera */
                                         }
-.flats .slider .slick-dots li           {
+.flats .slider>.slick-dots li           {
                                             height: auto;
                                             width: auto;
                                             vertical-align: middle;
                                             margin: 0 1px;
                                         }
-.flats .slider .slick-dots li button    {
+.flats .slider>.slick-dots li button    {
                                             font-size: 16px;
                                             color: #9E8B4C;
                                             background: transparent;
                                             width: 23px;
                                             height: 23px;
                                         }
-.flats .slider .slick-dots li.slick-active button
+.flats .slider>.slick-dots li.slick-active button
                                         {
                                             font-size: 16px;
                                             color: #000;
@@ -566,6 +565,7 @@ header .phone span               {
 .floor-info                             {
                                             display: inline-block;
                                             vertical-align: top;
+                                            position: relative;
                                         }
 .floor-info h2                          {
                                             font-size: 40px;
@@ -615,17 +615,21 @@ header .phone span               {
                                             cursor: pointer;
                                         }
 .floor-nav ul li:hover                  {    text-decoration: underline }
-#MapImg                                 {    position: relative }
+
+
+/*------ информация про квартиру при наведении ----*/ 
 .area-tip                               {
                                             position: absolute;
+                                            display: none;
                                             top: -200px;
                                             width: 180px;
                                             background: rgba(0,0,0,.9);
                                             border: 3px solid rgba(255,255,255,.7);
                                             -webkit-border-radius: 15px;
                                             border-radius: 15px;
+                                            pointer-events : none;
                                         }
-.floor-number                           {
+.flat-number                            {
                                             display: inline-block;
                                             vertical-align: top;
                                             margin-right: 15px;
@@ -634,7 +638,7 @@ header .phone span               {
                                             width: 35px;
                                             color: #FFF;
                                         }
-.floor-status                           {
+.flat-status                            {
                                             display: inline-block;
                                             vertical-align: top;
                                             width: 80px;
@@ -643,21 +647,85 @@ header .phone span               {
                                             text-align: left;
                                             padding: 10px 0 5px 0;
                                         }
-.floor-status span                      {    color: #928148 }
-#area-1                                 {
+.flat-status span                       {    color: #928148 }
+.tip-f1                                 {
                                             position: absolute;
-                                            top: -283px;
+                                            top: 180px;
+                                            left: 135px;
                                             font-size: 40px;
                                         }
+.tip-f2                                 {
+                                            position: absolute;
+                                            top: 170px;
+                                            right: 0;
+                                            font-size: 40px;
+                                        }
+.tip-f3                                 {
+                                            position: absolute;
+                                            top: 390px;
+                                            right: -27px;
+                                            font-size: 40px;
+                                        }
+@media (max-height: 850px)                             { 
+    .tip-f1                             {
+                                            top: 151px;
+                                            left: 20px;
+                                        }
+    .tip-f2                             {
+                                            top: 153px;
+                                            right: -23px;
+                                        }
+    .tip-f3                             {
+                                            top: 390px;
+                                            right: -40px;
+                                        }
+}
+@media (max-height: 730px)                             { 
+    .tip-f1                             {
+                                            top: 80px;
+                                            left: 25px;
+                                        }
+    .tip-f2                             {
+                                            top: 153px;
+                                            right: -59px;
+                                        }
+    .tip-f3                             {
+                                            top: 290px;
+                                            right: -27px;
+                                        }
+}
+@media (max-height: 650px)                             { 
+    .tip-f1                             {
+                                            top: 125px;
+                                            left: 0;
+                                        }
+    .tip-f2                             {
+                                            top: 160px;
+                                            right: 0;
+                                        }
+    .tip-f3                             {
+                                            top: 290px;
+                                            right: -27px;
+                                        }
+}
+
+/*------ попап про квартиру ----*/                                       
 .about-flat                             {
-                                            display: block;
+                                            display: none;
                                             width: 916px;
-                                            padding: 25px 35px 30px;
+                                            min-height: 600px;
+                                            padding: 25px 35px 30px 0;
                                             border: 3px solid #fff;
                                             background: #E4E4E4;
                                             -webkit-border-radius: 15px;
                                             border-radius: 15px;
                                         }
+.mfp-content                            {   text-align: center;}
+.mfp-content:after                      {   content: ""; height: 100%; display: inline-block; vertical-align: middle;}
+.mfp-content .about-flat                {   display: inline-block; vertical-align: middle;
+                                            position: relative;
+                                        }
+.about-flat .mfp-close                  {   font-family: "Georgia"; font-weight: 100; color: #333346; font-size: 50px;}
 .about-flat .right,
 .about-flat .left                       {
                                             display: inline-block;
@@ -668,7 +736,7 @@ header .phone span               {
                                             text-align: center;
                                         }
 .about-flat .right img,
-.about-flat .left img                   {   display: inline-block;}
+.about-flat .left img                   {   display: inline-block; max-width: 95%;}
 .about-flat .left img:nth-child(1)      {   margin-bottom: 45px;}
 
 .about-flat .right                      {   text-align: left;}
@@ -691,7 +759,7 @@ header .phone span               {
                                         }
 .about-flat tr td                       {   font: 23px "Georgia-Italic"; color: #202020;}
 
-.about-flat button                      {   width: 236px;
+.about-flat .right button               {   width: 236px;
                                             height: 50px;
                                             cursor: pointer; 
                                             background-color: #99874A;
@@ -705,6 +773,48 @@ header .phone span               {
                                             -webkit-border-radius: 17px;
                                                     border-radius: 17px;
                                         }
+.flat-gallery                           {   margin-top: 15px;}
+.flat-gallery .mini-slider .slick-dots  {   text-align: left; padding-left: 40px;}
+.flat-gallery .mini-slider              {   margin-bottom: 40px;}
+.flat-gallery .mini-slider .slick-dots li button {font-size: 0;}
+
+
+
+@media (max-width: 1500px)                             { 
+.floor-nav                              {
+                                             margin-left: 27px;
+                                        }
+.floor-nav span                         {    font-size: 18px }
+.floor-nav ul li                        {
+                                             font-size: 16px;
+                                        }
+}
+@media (max-width: 920px)                             { 
+.about-flat                             {   width: 700px;}
+.about-flat tr td                       {   font-size: 16px;}
+.about-flat tr th                       {   font-size: 14px;}
+}
+@media (max-width: 800px)                             { 
+.slide-floor-info                       {   margin-left: 0;}
+.floor-nav                              {   display: none;}
+.flats .slider                          {   background-size: 25%, 10%, cover;}
+.flats .slider .slick-next, .flats .slider .slick-prev {top: 50%;}
+.flats .slider .slick-prev              {   left: 3%;}
+.flats .slider .slick-next              {   right: 3%;} 
+}
+
+@media (max-width: 700px)                             { 
+.about-flat                             {   width: 95%; padding: 2%;}
+.about-flat .right,
+.about-flat .left                       {   width: 100%; padding: 3%;}
+.about-flat .right img,
+.about-flat .left img                   {   max-width: 45%; margin: 0 1%;}
+.about-flat tr td                       {   font-size: 14px;}
+.about-flat tr th                       {   font-size: 12px;}
+}
+@media (max-width: 400px)                             { 
+.about-flat .left img                   {   max-width: 95%; margin: 1%;}
+}
 
 /*---------------------------------------------------------------*/
 /*----------------------    CONTACTS    -------------------------*/

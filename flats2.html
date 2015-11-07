@@ -61,7 +61,44 @@
                     <div class="floor-info">
                         <h2>Второй этаж</h2>
                         <p class="all-flats">Всего: 9 квартир.<span>Свободно: 3 квартры</span></p>
-                        <img src="images/floor.png" alt="" usemap="#MapImg" class="MapImg" />
+
+                        <img src="images/floor.png" height="509" width="476" alt="" usemap="#Map" class="MapImg"/>
+                        <map name="Map" id="Map"> 
+                            <area alt="" title="" href="#floor-1-flat-1" shape="poly" coords="252,17,66,17,64,1,1,2,3,55,30,56,31,70,55,72,56,99,91,99,94,188,253,187" id="f1" />
+                            <area alt="" title="" href=".about-flat" shape="poly" coords="258,188,356,187,356,275,476,273,476,17,256,16" id="f2"/>
+                            <area shape="poly" alt="sold" title="" href=".about-flat"  coords="356,508,476,507,476,276,356,277" id="f3"/>
+                        </map><!-- end map  -->
+
+                        <div class="area-tip tip-f1">
+                            <div class="flat-number">
+                                3
+                            </div>
+                            <div class="flat-status">
+                                <span>Свободна</span>
+                                23м<sup>2</sup>
+                            </div>
+                        </div><!-- end area-tip f1 -->
+
+                        <div class="area-tip tip-f2">
+                            <div class="flat-number">
+                                6
+                            </div>
+                            <div class="flat-status">
+                                <span>Свободна</span>
+                                23м<sup>2</sup>
+                            </div>
+                        </div><!-- end area-tip f2 -->
+                        
+                        <div class="area-tip tip-f3">
+                            <div class="flat-number">
+                                5
+                            </div>
+                            <div class="flat-status">
+                                <span>Свободна</span>
+                                23м<sup>2</sup>
+                            </div>
+                        </div><!-- end area-tip f3 -->
+
                     </div>
 
                     <div class="floor-nav">
@@ -74,9 +111,9 @@
                             <li>Пятый этаж</li>
                             <li>Шестой этаж</li>
                         </ul>
-                    </div>
+                    </div><!-- end floor-nav -->
 
-                    <div class="about-flat">
+                    <div class="about-flat mfp-hide" id="floor-1-flat-1">
                         <div class="left">
                             <img src="images/flats/flat-plan.png" alt="">
                             <img src="images/flats/flat-plan-lt.png" alt="">
@@ -101,7 +138,12 @@
                               </tr>
                             </table> 
                             <div class="flat-gallery">
-                                
+                                <div class="mini-slider">
+                                    <div class="slide" style="background-image: url(images/about/art-3-slide-1.jpg)"></div>
+                                    <div class="slide" style="background-image: url(images/about/art-3-slide-1.jpg)"></div>
+                                    <div class="slide" style="background-image: url(images/about/art-3-slide-1.jpg)"></div>
+                                    <div class="slide" style="background-image: url(images/about/art-3-slide-1.jpg)"></div>  
+                                </div>
                             </div>
                             <button>
                                 Оставить заявку
@@ -111,65 +153,15 @@
                 
                 </div>
 
-            </div><!-- end slider-1 -->
+            </div><!-- === end slide-1 === -->
+
 
             <div class="slide vertical"> 
 
-                <div class="slide-floor-info">
-                    <div class="floor-info">
-                        <h2>Второй этаж</h2>
-                        <p class="all-flats">Всего: 9 квартир.<span>Свободно: 3 квартры</span></p>
-                        <img src="images/floor.png" alt="" usemap="#MapImg" class="MapImg" />
-                    </div>
-
-                    <div class="floor-nav">
-                        <span>Можете выбрать <br> другой этаж:</span>
-                        <ul>
-                            <li>Первый этаж</li>
-                            <li>Второй этаж</li>
-                            <li>Третий этаж</li>
-                            <li>Четвертый этаж</li>
-                            <li>Пятый этаж</li>
-                            <li>Шестой этаж</li>
-                        </ul>
-                    </div>
-
-                    <div class="about-flat">
-                        <div class="left">
-                            <img src="images/flats/flat-plan.png" alt="">
-                            <img src="images/flats/flat-plan-lt.png" alt="">
-                        </div>
-                        <div class="right">
-                            <h3>
-                                Второй этаж<br>
-                                <span>Двухкомнатная квартира</span>
-                            </h3>
-                             <table style="width:100%">
-                              <tr>
-                                <th>Площадь квартиры</th>
-                                <th>Площадь балкона</th>
-                                <th>Кол-во спальных</th>
-                                <th>Кол-во ванных</th>
-                              </tr>
-                              <tr>
-                                <td>245.5 м2</td>
-                                <td>55.5 м2</td>
-                                <td>2 шт.</td>
-                                <td>1 шт.</td>
-                              </tr>
-                            </table> 
-                            <div class="flat-gallery">
-                                
-                            </div>
-                            <button>
-                                Оставить заявку
-                            </button>    
-                        </div>
-                    </div><!-- end about-flat popup -->
                 
-                </div>
 
-            </div><!-- end slide-2 -->
+            </div><!-- === end slide-2 === -->
+
         </div><!-- end slider -->
 
   	    <!-- //////////////////////////////////////////////////////////////////////// -->

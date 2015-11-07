@@ -94,6 +94,8 @@ jQuery(document).ready(function($) {
     $.magnificPopup.close();
   });
 
+$('#Map area').magnificPopup();
+
 
 /********************************************************************************************/
 //-------------------------Google Карта география производства ---------------------------------
@@ -187,19 +189,20 @@ jQuery(document).ready(function($) {
 
 
 
-  $('.MapImg').maphilight({
+  
+$(function () {
+    var data = {};
+    $('.MapImg').maphilight({
     fillColor: '928148',
     strokeColor: 'rgba(152,136,83, 0.5)',
     fillOpacity: 0.5
   });
+    data.alwaysOn = true;
+    $('area[alt="sold"]').data('maphilight', data).trigger('alwaysOn.maphilight');
+});
+
+
   $('img[usemap]').rwdImageMaps();
-
-
-  $('.MapImg area').each(function() {
-      $(this).mouseover(function() {
-          console.log('csdc');
-      });
-  });
 
 
   $('#fullpage').fullpage({
@@ -259,6 +262,23 @@ jQuery(document).ready(function($) {
     fade: true,
     autoplaySpeed: 4000
   });
+
+
+ if($('#Map')) {
+        $('#Map area').each(function() {
+            var id = $(this).attr('id');
+            $(this).mouseover(function() {
+                $(this).parent().siblings('.tip-'+id).show();
+            });
+
+            $(this).mouseout(function() {
+                var id = $(this).attr('id');
+                $(this).parent().siblings('.tip-'+id).hide();
+            });
+
+        });
+    }
+
 
 });
 
