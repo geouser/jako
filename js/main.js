@@ -156,10 +156,15 @@ jQuery(document).ready(function($) {
       });
   };
 
-
   if ($('#map-canvas').length > 0) {
     map_initialize();
   };
+
+  $('.close-box').on('click', function(event) {
+    event.preventDefault();
+      $(this).parent('.box').fadeOut('fast', function() { 
+    });
+  });
   
 
 /***********************************************************************/

@@ -680,9 +680,42 @@ header .phone span               {
                                        background-color: #000;
                                        left: 0;}
 .tooltip .text-block p               { font-size: 16px; margin-top: 50px; font-family: 'Times New Roman'}
+.close-box                           { width: 26px;
+                                        height: 26px;
+                                        position: absolute;
+                                        left: 50%;
+                                        margin-left: -13px;
+                                        bottom: -13px;
+                                        border-radius: 50%;
+                                        background-image: url(../images/close.svg);
+                                        background-size: 50% 50%;
+                                        background-position: 50% 50%;
+                                        background-repeat: no-repeat;
+                                        border: none;}
 
-
-
+@media (max-width: 1200px) and (orientation: portrait) {
+  .tooltip                            { width: 100%; padding-top: 75px;}
+}
+@media (max-width: 1200px) and (orientation: landscape) {
+  .tooltip                            { padding-top: 75px;}
+}
+@media (orientation: landscape) and (max-height: 550px) {
+  .tooltip .mini-slider .slide        { height: 170px; width: 100%;}
+  .tooltip .box                       { width: 320px;}
+}
+@media (max-width: 1200px) and (orientation: landscape) and (max-height: 470px) {
+  .tooltip                            { padding-top: 0;}
+}
+@media (max-width: 1200px) and (orientation: landscape) and (max-height: 390px) {
+  .tooltip                            { position: static;}
+}
+@media (max-width: 600px) and (orientation: landscape) and (max-height: 390px) {
+  .tooltip                            { width: 100%; height: auto;}
+  #map                                { height: auto; min-height: 100%;}
+}
+@media (max-width: 400px) {
+  .tooltip .box                       { width: 90%;}
+}
 
 
 /*---------------------------------------------------------------*/
