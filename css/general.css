@@ -656,6 +656,26 @@ header .phone span               {
                                             right: -27px;
                                             font-size: 40px;
                                         }
+.status-color                           {   list-style-type: none;
+                                            color: #5E5E5E;
+                                            font-size: 18px;
+                                            position: absolute;
+                                            top: 350px;
+                                            left: 90px;
+                                        }
+.status-color li:before                    {
+                                            content: "";
+                                            display: inline-block;
+                                            width: 15px;
+                                            height: 15px;
+                                            margin-right: 5px;
+                                            -webkit-border-radius: 2px;
+                                                    border-radius: 2px;   
+                                        }
+li.status-color__sold                   {   color: #5E5E5E;}
+li.status-color__sold:before            {   background-color: #5E5E5E;}
+
+
 @media (max-height: 850px)                             { 
     .tip-f1                             {
                                             top: 151px;
@@ -668,6 +688,11 @@ header .phone span               {
     .tip-f3                             {
                                             top: 390px;
                                             right: -40px;
+                                        }
+    .status-color                       {
+                                            font-size: 16px;
+                                            top: 300px;
+                                            left: 70px;
                                         }
 }
 @media (max-height: 730px)                             { 
@@ -683,6 +708,12 @@ header .phone span               {
                                             top: 290px;
                                             right: -27px;
                                         }
+    .status-color li:before             {   width: 12px; height: 12px;}
+    .status-color                       {
+                                            font-size: 14px;
+                                            top: 250px;
+                                            left: 30px;
+                                        }
 }
 @media (max-height: 650px)                             { 
     .tip-f1                             {
@@ -696,6 +727,11 @@ header .phone span               {
     .tip-f3                             {
                                             top: 290px;
                                             right: -27px;
+                                        }
+    .status-color                       {
+                                            font-size: 14px;
+                                            top: 250px;
+                                            left: 30px;
                                         }
 }
 
