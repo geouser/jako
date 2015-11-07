@@ -45,17 +45,7 @@ body                          {    margin: 0;
                                    font-family: 'Georgia-Regular';}
 
 p                             {    color: #000;}
-h1, h2, h3, h4, h5, p         {    margin: 0; 
-                                    -webkit-transform:scale(0.85,0.97); /* Safari and Chrome */
-                                    -moz-transform:scale(0.85,0.97); /* Firefox */
-                                    -ms-transform:scale(0.85,0.97); /* IE 9+ */
-                                    -o-transform:scale(0.85,0.97); /* Opera */
-                              }
-span                          {     -webkit-transform:scale(0.85,0.97); /* Safari and Chrome */
-                                            -moz-transform:scale(0.85,0.97); /* Firefox */
-                                            -ms-transform:scale(0.85,0.97); /* IE 9+ */
-                                            -o-transform:scale(0.85,0.97); /* Opera */
-                              }
+h1, h2, h3, h4, h5, p         {    margin: 0; }
 a                             {    text-decoration: none;}
 strong                        {    font-weight: 900;}
 ul                            {    padding: 0;}
@@ -570,13 +560,13 @@ header .phone span               {
 .floor-info h2                          {
                                             font-size: 40px;
                                             font-variant: small-caps;
-                                            transform : scale(1,1.5);
                                             font-weight: 100;
                                             -webkit-transform: scale(0.85,0.97); /* Safari and Chrome */
                                             -moz-transform: scale(0.85,0.97); /* Firefox */
                                             -ms-transform: scale(0.85,0.97); /* IE 9+ */
                                             -o-transform: scale(0.85,0.97); /* Opera */
                                         }
+
 .floor-nav                              {
                                             display: inline-block;
                                             vertical-align: top;
@@ -744,17 +734,22 @@ header .phone span               {
                                             font-variant: small-caps;
                                             margin-left: -33px;
                                             line-height: 1;
+                                             -webkit-transform:scale(0.85,0.97); /* Safari and Chrome */
+                                            -moz-transform:scale(0.85,0.97); /* Firefox */
+                                            -ms-transform:scale(0.85,0.97); /* IE 9+ */
+                                            -o-transform:scale(0.85,0.97); /* Opera */
                                         }
-.about-flat .right>span                 {   font-size: 18px; color: #444343; display: inline-block; margin-left: -13px;}
+.about-flat .right>span                 {   font-size: 18px; color: #444343; display: inline-block; margin-left: -13px;
+                                         -webkit-transform:scale(0.85,0.97); /* Safari and Chrome */
+                                            -moz-transform:scale(0.85,0.97); /* Firefox */
+                                            -ms-transform:scale(0.85,0.97); /* IE 9+ */
+                                            -o-transform:scale(0.85,0.97); /* Opera */
+                                        }
 
 
 .about-flat table                      {    margin-top: 25px;}
 .about-flat tr                         {    border-top: 1px solid #99874A; height: 50px;}
 .about-flat tr th                      {    font-size: 16px; color: #9E8B4C;
-                                            -webkit-transform:scale(0.85,0.97); /* Safari and Chrome */
-                                            -moz-transform:scale(0.85,0.97); /* Firefox */
-                                            -ms-transform:scale(0.85,0.97); /* IE 9+ */
-                                            -o-transform:scale(0.85,0.97); /* Opera */
                                             font-family: "Georgia-Italic";
                                         }
 .about-flat tr td                       {   font: 23px "Georgia-Italic"; color: #202020;}
@@ -765,10 +760,6 @@ header .phone span               {
                                             background-color: #99874A;
                                             color: #fff;
                                             font: 20px "Georgia";
-                                            -webkit-transform:scale(0.85,0.97); /* Safari and Chrome */
-                                            -moz-transform:scale(0.85,0.97); /* Firefox */
-                                            -ms-transform:scale(0.85,0.97); /* IE 9+ */
-                                            -o-transform:scale(0.85,0.97); /* Opera */
                                             border: 3px solid #fff;
                                             -webkit-border-radius: 17px;
                                                     border-radius: 17px;
