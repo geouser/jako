@@ -246,7 +246,8 @@ jQuery(document).ready(function($) {
       slideSelector: '.fp-slide',
       scrollOverflow: true,
       responsiveWidth: 1200,
-      responsiveHeight: 650
+      responsiveHeight: 650,
+      normalScrollElements: '.mini-slim'
     });
   };
   
