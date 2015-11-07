@@ -158,10 +158,15 @@ $('#Map area').magnificPopup();
       });
   };
 
-
   if ($('#map-canvas').length > 0) {
     map_initialize();
   };
+
+  $('.close-box').on('click', function(event) {
+    event.preventDefault();
+      $(this).parent('.box').fadeOut('fast', function() { 
+    });
+  });
   
 
 /***********************************************************************/
@@ -180,41 +185,6 @@ $('#Map area').magnificPopup();
     $(this).siblings('.menu').fadeToggle('fast');
   });
 
-
-  $('.slim').slimScroll({
-    color: '#000',
-    size: '3px',
-    height: '100%'
-  });
-
-
-
-  
-$(function () {
-    var data = {};
-    $('.MapImg').maphilight({
-    fillColor: '928148',
-    strokeColor: 'rgba(152,136,83, 0.5)',
-    fillOpacity: 0.5
-  });
-    data.alwaysOn = true;
-    $('area[alt="sold"]').data('maphilight', data).trigger('alwaysOn.maphilight');
-});
-
-
-  $('img[usemap]').rwdImageMaps();
-
-
-  $('#fullpage').fullpage({
-    anchors: ['firstPage', 'secondPage', 'thirdPage'],
-    navigationTooltips: ['First', 'Second', 'Third'],
-    menu: '#myMenu',
-    slideSelector: '.fp-slide',
-    scrollOverflow: true,
-    responsiveWidth: 1200,
-    responsiveHeight: 650
-  });
-
   if ($('.slim').length > 0) {
     $('.slim').slimScroll({
       color: '#000',
@@ -222,6 +192,25 @@ $(function () {
       height: '100%'
     });
   };
+  
+
+  /*if ($('img[usemap]').length > 0) {
+    $('img[usemap]').rwdImageMaps();
+  };*/
+  
+  if ($('.MapImg').length > 0) {
+    $(function () {
+        var data = {};
+        $('.MapImg').maphilight({
+        fillColor: '928148',
+        strokeColor: 'rgba(152,136,83, 0.5)',
+        fillOpacity: 0.5
+      });
+        data.alwaysOn = true;
+        $('area[alt="sold"]').data('maphilight', data).trigger('alwaysOn.maphilight');
+    });  
+  };
+
   if ($('.mini-slim').length > 0) {
     $('.mini-slim').slimScroll({
       color: '#000',
@@ -233,11 +222,26 @@ $(function () {
   if ($('#img').length > 0) {
     $('#img').mapster({
       render_highlight: {
-          stroke: false,
-          altImage: 'images/flats/house-hover.jpg'
+          stroke: true,
+          strokeWidth: 3,
+          strokeColor: 'ffffff',
+          fill: true,
+          fillColor: 'ffffff',
+          fillOpacity: 0.5
       },
       isSelectable: false,
       clickNavigate: true
+    });
+
+    var wd = $(window).width();
+    var imght = $('#img').height()
+    $('.map-wrap').css('margin-top', '-' + (imght/2) + 'px');
+
+    $(window).resize(function(event) {
+      wd = $(this).width();
+      imght = $('#img').height()
+      $('#img').mapster('resize',wd,imght,0); 
+      $('.map-wrap').css('margin-top', '-' + (imght/2) + 'px');
     });
   };
 
@@ -247,21 +251,22 @@ $(function () {
       navigationTooltips: ['First', 'Second', 'Third'],
       menu: '#myMenu',
       slideSelector: '.fp-slide',
-      scrollOverflow: true,
+      scrollOverflow: false,
       responsiveWidth: 1200,
-      responsiveHeight: 650,
+      responsiveHeight: 750,
       normalScrollElements: '.mini-slim'
     });
   };
-  
 
-  $('.mini-slider').slick({
-    arrows: false,
-    dots: true,
-    autoplay: false,
-    fade: true,
-    autoplaySpeed: 4000
-  });
+  if ($('.mini-slider').length > 0) {
+    $('.mini-slider').slick({
+      arrows: false,
+      dots: true,
+      autoplay: false,
+      fade: true,
+      autoplaySpeed: 4000
+    });
+  };
 
 
  if($('#Map')) {
