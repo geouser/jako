@@ -573,18 +573,36 @@ header .phone span               {
                                             vertical-align: top;
                                             margin-top: 100px;
                                         }
-.MapImg                                 {
-                                            background-size: 100% 100% !important;
-                                            width: 476px !important;
-                                            height: 510px !important;
-                                            margin-top: 1vw;
-                                        }
+.floor-map     {width: 476px;
+                margin-top: 1vw; 
+                position: relative;
+                height: 509px; 
+                background-image: url(../images/floor.png); 
+                background-repeat: no-repeat; 
+                -webkit-background-size: 100% 100%;
+                     -o-background-size: 100% 100%;
+                        background-size: 100% 100%;
+                }
+.floor-map svg                {  position: absolute; width: 100%;
+                                height: 100%;
+                                left: 0;
+                                top: 0;}
+.floor-map polygon           {
+                                cursor: pointer;
+                                -webkit-transition: all .3s;
+                                   -moz-transition: all .3s;
+                                    -ms-transition: all .3s;
+                                     -o-transition: all .3s;
+                                        transition: all .3s;
+                              }
+.floor-map polygon:hover      {  fill: rgba(146,129,72, .7);}
+.floor-map polygon.sold        {  fill: #5E5E5E; opacity: 0.5;}
 
 @media (max-height: 850px)                             { 
-    .MapImg        {    width: 360px!important; height: 410px!important;}
+    .floor-map        {    width: 380px; height: 407px;}
 }
 @media (max-height: 730px)                             { 
-    .MapImg        {    width: 288px!important;height: 328px!important;}
+    .floor-map        {    width: 304px; height: 325px;}
 }
 @media (max-height: 650px)                             { 
     .flats .slider {    min-height: 650px;padding-bottom: 80px;}
@@ -621,22 +639,22 @@ header .phone span               {
                                             pointer-events : none;
                                         }
 .flat-number                            {
-                                            display: inline-block;
-                                            vertical-align: top;
-                                            margin-right: 15px;
+                                           display: inline-block;
+                                            vertical-align: middle;
+                                            margin-right: 5px;
                                             font-size: 60px;
-                                            margin-top: -15px;
                                             width: 35px;
                                             color: #FFF;
+                                            line-height: 60px;
                                         }
 .flat-status                            {
                                             display: inline-block;
                                             vertical-align: top;
-                                            width: 80px;
+                                            width: 90px;
                                             color: #FFF;
                                             font-size: 20px;
                                             text-align: left;
-                                            padding: 10px 0 5px 0;
+                                            padding: 10px 0 10px 0;
                                         }
 .flat-status span                       {    color: #928148 }
 .tip-f1                                 {
@@ -657,6 +675,26 @@ header .phone span               {
                                             right: -27px;
                                             font-size: 40px;
                                         }
+.status-color                           {   list-style-type: none;
+                                            color: #5E5E5E;
+                                            font-size: 18px;
+                                            position: absolute;
+                                            top: 350px;
+                                            left: 90px;
+                                        }
+.status-color li:before                    {
+                                            content: "";
+                                            display: inline-block;
+                                            width: 15px;
+                                            height: 15px;
+                                            margin-right: 5px;
+                                            -webkit-border-radius: 2px;
+                                                    border-radius: 2px;   
+                                        }
+li.status-color__sold                   {   color: #5E5E5E;}
+li.status-color__sold:before            {   background-color: #5E5E5E;}
+
+
 @media (max-height: 850px)                             { 
     .tip-f1                             {
                                             top: 151px;
@@ -670,33 +708,49 @@ header .phone span               {
                                             top: 390px;
                                             right: -40px;
                                         }
+    .status-color                       {
+                                            font-size: 16px;
+                                            top: 300px;
+                                            left: 70px;
+                                        }
 }
 @media (max-height: 730px)                             { 
     .tip-f1                             {
-                                            top: 80px;
+                                            top: 110px;
                                             left: 25px;
                                         }
     .tip-f2                             {
-                                            top: 153px;
+                                            top: 133px;
                                             right: -59px;
                                         }
     .tip-f3                             {
                                             top: 290px;
                                             right: -27px;
                                         }
+    .status-color li:before             {   width: 12px; height: 12px;}
+    .status-color                       {
+                                            font-size: 14px;
+                                            top: 250px;
+                                            left: 30px;
+                                        }
 }
 @media (max-height: 650px)                             { 
     .tip-f1                             {
-                                            top: 125px;
+                                            top: 105px;
                                             left: 0;
                                         }
     .tip-f2                             {
-                                            top: 160px;
+                                            top: 140px;
                                             right: 0;
                                         }
     .tip-f3                             {
                                             top: 290px;
                                             right: -27px;
+                                        }
+    .status-color                       {
+                                            font-size: 14px;
+                                            top: 250px;
+                                            left: 30px;
                                         }
 }
 
@@ -705,9 +759,14 @@ header .phone span               {
                                             display: none;
                                             width: 916px;
                                             min-height: 600px;
-                                            padding: 25px 35px 30px 0;
+                                            padding: 25px 0px 30px 0;
                                             border: 3px solid #fff;
-                                            background: #E4E4E4;
+                                            background-image: url(../images/popUpBg.jpg);
+                                            background-repeat: no-repeat;
+                                            background-position: 50% 50%;
+                                            -webkit-background-size: cover;
+                                                 -o-background-size: cover;
+                                                    background-size: cover;
                                             -webkit-border-radius: 15px;
                                             border-radius: 15px;
                                         }
@@ -716,16 +775,24 @@ header .phone span               {
 .mfp-content .about-flat                {   display: inline-block; vertical-align: middle;
                                             position: relative;
                                         }
-.about-flat .mfp-close                  {   font-family: "Georgia"; font-weight: 100; color: #333346; font-size: 50px;}
+.about-flat .mfp-close                  {   font-size: 0px; width: 34px; height: 34px; 
+                                            right: 20px; top: 20px;
+                                            background-image: url(../images/cross.png);
+                                            background-repeat: no-repeat;
+                                            -webkit-background-size: 100% 100%;
+                                                  -o-background-size: 100% 100%;
+                                                     background-size: 100% 100%; 
+                                        }
 .about-flat .right,
 .about-flat .left                       {
                                             display: inline-block;
                                             vertical-align: top;
-                                            width: 49%;
                                             margin-right: 0;
                                             height: 100%;
                                             text-align: center;
                                         }
+.about-flat .left                       {   width: 40%;}
+.about-flat .right                      {   width: 49%; padding-left: 5%;}
 .about-flat .right img,
 .about-flat .left img                   {   display: inline-block; max-width: 95%;}
 .about-flat .left img:nth-child(1)      {   margin-bottom: 45px;}
@@ -796,7 +863,7 @@ header .phone span               {
 }
 
 @media (max-width: 700px)                             { 
-.about-flat                             {   width: 95%; padding: 2%;}
+.about-flat                             {   width: 95%; padding: 2%; background: #F8F8F8;}
 .about-flat .right,
 .about-flat .left                       {   width: 100%; padding: 3%;}
 .about-flat .right img,
@@ -807,6 +874,26 @@ header .phone span               {
 @media (max-width: 400px)                             { 
 .about-flat .left img                   {   max-width: 95%; margin: 1%;}
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 /*---------------------------------------------------------------*/
 /*----------------------    CONTACTS    -------------------------*/
