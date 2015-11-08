@@ -427,13 +427,13 @@ nav li a                         {
 
 
 
-nav li a:hover                   {
+nav li a:hover,
+nav li a.active                  {
                                      color: #ddd9ce;
                                      border-bottom: 1px solid #ddd9ce;
                                      padding-bottom: 3px;
                                      top: -2px;
                                  }
-nav li:hover                     { }
 header .phone                    {
                                      height: 100%;
                                      float: right;
@@ -1104,7 +1104,37 @@ li.status-color__sold:before            {   background-color: #5E5E5E;}
                                         background-size: 50% 50%;
                                         background-position: 50% 50%;
                                         background-repeat: no-repeat;
-                                        border: none;}
+                                        border: none;
+                                        background-color: #E1E1E1;}
+.panorams                             { position: absolute;
+                                        width: 210px;
+                                        margin-left: -105px;
+                                        height: 44px;
+                                        bottom: 0;
+                                        left: 50%;
+                                        text-align: center;
+                                        background-image: url(../images/dotsBg.png);
+                                        background-size: 100% 100%;
+                                        background-repeat: no-repeat;
+                                        opacity: 0.8;
+                                        -webkit-transition: all 0.3s ease;
+                                             -o-transition: all 0.3s ease;
+                                                transition: all 0.3s ease;}
+.panorams:hover                       { opacity: 1;}
+.panorams a                           { display: inline-block;
+                                        vertical-align: middle;
+                                        font-size: 16px;
+                                        color: #9e8b4c;
+                                        text-decoration: underline;}
+
+.gm-style                       {       overflow: visible !important;}
+a[href^="http://maps.google.com/maps"] {display:none !important}
+a[href^="https://maps.google.com/maps"]{display:none !important}
+.gmnoprint a,
+.gmnoprint span,
+.gm-style-cc                    {       display:none;}
+.gmnoprint div                  {       background:none !important;}
+
 
 @media (max-width: 1200px) and (orientation: portrait) {
   .tooltip                            { width: 100%; padding-top: 75px;}
