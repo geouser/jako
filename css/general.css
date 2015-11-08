@@ -493,7 +493,6 @@ header .phone span               {
 /*----------------------   floor info    -------------------------*/
 /*----------------------      PAGE      -------------------------*/
 /*---------------------------------------------------------------*/
-.flats                                  {   position: relative; height: 100%;}
 .flats .slider                          {
                                             padding-top: 100px;
                                             position: relative;
@@ -775,7 +774,7 @@ li.status-color__sold:before            {   background-color: #5E5E5E;}
 .mfp-content .about-flat                {   display: inline-block; vertical-align: middle;
                                             position: relative;
                                         }
-.about-flat .mfp-close                  {   font-size: 0px; width: 34px; height: 34px; 
+ .mfp-close                             {   font-size: 0px; width: 34px; height: 34px; 
                                             right: 20px; top: 20px;
                                             background-image: url(../images/cross.png);
                                             background-repeat: no-repeat;
@@ -879,10 +878,63 @@ li.status-color__sold:before            {   background-color: #5E5E5E;}
 
 
 
+/*------ попап про квартиру ----*/  
 
-
-
-
+.popup-callback                         {   width: 480px;
+                                            border: 3px solid #fff;
+                                            padding: 20px 5px;
+                                            text-align: center;
+                                            -webkit-border-radius: 15px;
+                                            border-radius: 15px;
+                                            background: rgb(244,255,255, .7); /* Old browsers */
+                                            background: -moz-radial-gradient(center, ellipse cover, rgba(248,248,248,1) 0%, rgba(248,248,248,1) 0%, rgba(248,248,248,1) 51%, rgba(248,248,248,1) 51%, rgba(210,210,210,1) 100%); /* FF3.6+ */
+                                            background: -webkit-gradient(radial, center center, 0px, center center, 100%, color-stop(0%,rgba(248,248,248,1)), color-stop(0%,rgba(248,248,248,1)), color-stop(51%,rgba(248,248,248,1)), color-stop(51%,rgba(248,248,248,1)), color-stop(100%,rgba(210,210,210,1))); /* Chrome,Safari4+ */
+                                            background: -webkit-radial-gradient(center, ellipse cover, rgba(248,248,248,1) 0%,rgba(248,248,248,1) 0%,rgba(248,248,248,1) 51%,rgba(248,248,248,1) 51%,rgba(210,210,210,1) 100%); /* Chrome10+,Safari5.1+ */
+                                            background: -o-radial-gradient(center, ellipse cover, rgba(248,248,248,1) 0%,rgba(248,248,248,1) 0%,rgba(248,248,248,1) 51%,rgba(248,248,248,1) 51%,rgba(210,210,210,1) 100%); /* Opera 12+ */
+                                            background: -ms-radial-gradient(center, ellipse cover, rgba(248,248,248,1) 0%,rgba(248,248,248,1) 0%,rgba(248,248,248,1) 51%,rgba(248,248,248,1) 51%,rgba(210,210,210,1) 100%); /* IE10+ */
+                                            background: radial-gradient(ellipse at center, rgba(248,248,248,1) 0%,rgba(248,248,248,1) 0%,rgba(248,248,248,1) 51%,rgba(248,248,248,1) 51%,rgba(210,210,210,1) 100%); /* W3C */
+;
+                                        }
+.popup-callback h2                      {   font: 40px 'Georgia-Regular'; 
+                                            -webkit-transform: scale(0.85,0.97); /* Safari and Chrome */
+                                            -moz-transform: scale(0.85,0.97); /* Firefox */
+                                            -ms-transform: scale(0.85,0.97); /* IE 9+ */
+                                            -o-transform: scale(0.85,0.97); /* Opera */
+                                            }
+.popup-callback span                    {   font-size: 18px;
+                                            -webkit-transform: scale(0.85,0.97); /* Safari and Chrome */
+                                            -moz-transform: scale(0.85,0.97); /* Firefox */
+                                            -ms-transform: scale(0.85,0.97); /* IE 9+ */
+                                            -o-transform: scale(0.85,0.97); /* Opera */
+                                        }
+.popup-callback form                    {   margin-top: 20px; padding: 20px 50px; width: 100%;
+                                            background-image: url(../images/callbackBg.png);
+                                            background-repeat: no-repeat;
+                                        }
+.popup-callback form input              {   width: 180px; height: 50px; text-align: center;
+                                            font: 19px 'Georgia-Italic';
+                                            color: #C1C1C1;
+                                            border: 1px solid #A6A6A6;
+                                            -webkit-box-shadow: inset 0px 6px 4px -8px rgba(0,0,0,0.75);
+-moz-box-shadow: inset 0px 6px 4px -8px rgba(0,0,0,0.75);
+box-shadow: inset 0px 6px 4px -8px rgba(0,0,0,0.75);
+                                        }
+.popup-callback button                  {   width: 246px;
+                                            height: 50px;
+                                            margin-top: 12px;
+                                            display: inline-block;
+                                            cursor: pointer; 
+                                            background-color: #99874A;
+                                            color: #fff;
+                                            font: 20px 'Georgia-Regular';
+                                            border: 3px solid #fff;
+                                            -webkit-transform: scale(0.85,0.97); /* Safari and Chrome */
+                                            -moz-transform: scale(0.85,0.97); /* Firefox */
+                                            -ms-transform: scale(0.85,0.97); /* IE 9+ */
+                                            -o-transform: scale(0.85,0.97); /* Opera */
+                                            -webkit-border-radius: 17px;
+                                                    border-radius: 17px;
+                                        }
 
 
 
@@ -1038,22 +1090,17 @@ li.status-color__sold:before            {   background-color: #5E5E5E;}
                                       position: relative;
                                       background-color: #000;
                                       overflow: hidden;}
-.map-wrap                           { position: relative;
-                                      width: 100%;}
+.map-wrap                           { position: absolute;
+                                      width: 100%;
+                                      left: 0%;
+                                      right: 0%;
+                                      top: 50%;}
 
-#img,
-#img-svg                                {width: 100%; position: absolute; top: 50%; left: 0;}
-#img-svg                            {z-index: 2;}
-#img-svg polygon                    { opacity: 0;
-                                      cursor: pointer;
-                                      -webkit-transition: all 0.3s ease;
-                                      -o-transition: all 0.3s ease;
-                                      transition: all 0.3s ease;}
-#img-svg polygon:hover              { opacity: 1; fill: rgba(255,255,255,0.6);}
-/*#mapster_wrap_0                     {width: 100%!important; height: auto!important;}
+#img                                {width: 100%!important; height: auto!important;}
+#mapster_wrap_0                     {width: 100%!important; height: auto!important;}
 .mapster_el                         {width: 100%!important; height: auto!important;}
-#Map                                {width: 100%!important;}*/
-.flats {display: none;}
+#Map                                {width: 100%!important;}
+
 
 
 /*---------------------------------------------------------------*/
