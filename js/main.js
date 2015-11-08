@@ -94,7 +94,13 @@ jQuery(document).ready(function($) {
     $.magnificPopup.close();
   });
 
-$('#Map area').magnificPopup();
+$('.floor-map polygon').magnificPopup({
+    fixedContentPos: false,
+    fixedBgPos: true,
+    overflowY: 'auto',
+    removalDelay: 300,
+    mainClass: 'my-mfp-slide-bottom'
+});
 
 
 /********************************************************************************************/
@@ -269,20 +275,19 @@ $('#Map area').magnificPopup();
   };
 
 
- if($('#Map')) {
-        $('#Map area').each(function() {
-            var id = $(this).attr('id');
-            $(this).mouseover(function() {
-                $(this).parent().siblings('.tip-'+id).show();
-            });
 
-            $(this).mouseout(function() {
-                var id = $(this).attr('id');
-                $(this).parent().siblings('.tip-'+id).hide();
-            });
-
+    $('.floor-map polygon').each(function() {
+        var id = $(this).attr('number');
+        $(this).mouseover(function() {
+            $(this).parent().parent().siblings('.tip-'+id).show();
         });
-    }
+
+        $(this).mouseout(function() {
+            var id = $(this).attr('number');
+            $(this).parent().parent().siblings('.tip-'+id).hide();
+        });
+
+    });
 
 
 });
