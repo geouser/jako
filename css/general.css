@@ -494,6 +494,7 @@ header .phone span               {
 /*----------------------   floor info    -------------------------*/
 /*----------------------      PAGE      -------------------------*/
 /*---------------------------------------------------------------*/
+.flats                                  {   position: relative; height: 100%;}
 .flats .slider                          {
                                             padding-top: 100px;
                                             position: relative;
@@ -783,6 +784,7 @@ li.status-color__sold:before            {   background-color: #5E5E5E;}
                                                   -o-background-size: 100% 100% !important;
                                                      background-size: 100% 100% !important; 
                                         }
+.mfp-close:active                       {     top: 20px;}                                      
 .about-flat .right,
 .about-flat .left                       {
                                             display: inline-block;
@@ -1091,17 +1093,22 @@ box-shadow: inset 0px 6px 4px -8px rgba(0,0,0,0.75);
                                       position: relative;
                                       background-color: #000;
                                       overflow: hidden;}
-.map-wrap                           { position: absolute;
-                                      width: 100%;
-                                      left: 0%;
-                                      right: 0%;
-                                      top: 50%;}
+.map-wrap                           { position: relative;
+                                      width: 100%;}
 
-#img                                {width: 100%!important; height: auto!important;}
-#mapster_wrap_0                     {width: 100%!important; height: auto!important;}
+#img,
+#img-svg                                {width: 100%; position: absolute; top: 50%; left: 0;}
+#img-svg                            {z-index: 2;}
+#img-svg polygon                    { opacity: 0;
+                                      cursor: pointer;
+                                      -webkit-transition: all 0.3s ease;
+                                      -o-transition: all 0.3s ease;
+                                      transition: all 0.3s ease;}
+#img-svg polygon:hover              { opacity: 1; fill: rgba(255,255,255,0.6);}
+/*#mapster_wrap_0                     {width: 100%!important; height: auto!important;}
 .mapster_el                         {width: 100%!important; height: auto!important;}
-#Map                                {width: 100%!important;}
-
+#Map                                {width: 100%!important;}*/
+.flats {display: none;}
 
 
 /*---------------------------------------------------------------*/
