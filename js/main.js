@@ -99,7 +99,12 @@ $('.floor-map polygon').magnificPopup({
     fixedBgPos: true,
     overflowY: 'auto',
     removalDelay: 300,
-    mainClass: 'my-mfp-slide-bottom'
+    mainClass: 'my-mfp-slide-bottom',
+    callbacks: {
+      open: function() {
+        $('.mini-slider').get(0).slick.setPosition();
+      }
+    }
 });
 
 
@@ -225,31 +230,9 @@ $('.floor-map polygon').magnificPopup({
     });
   };
   
-  /*if ($('#img').length > 0) {
-    $('#img').mapster({
-      render_highlight: {
-          stroke: true,
-          strokeWidth: 3,
-          strokeColor: 'ffffff',
-          fill: true,
-          fillColor: 'ffffff',
-          fillOpacity: 0.5
-      },
-      isSelectable: false,
-      clickNavigate: true
-    });
 
-    var wd = $(window).width();
-    var imght = $('#img').height()
-    $('.map-wrap').css('margin-top', '-' + (imght/2) + 'px');
 
-    $(window).resize(function(event) {
-      wd = $(this).width();
-      imght = $('#img').height()
-      $('#img').mapster('resize',wd,imght,0); 
-      $('.map-wrap').css('margin-top', '-' + (imght/2) + 'px');
-    });
-  };*/
+/*---------------------------------------------------------------------------------*/
   var wd = $(window).width();
   var imght = $('#img').height()
   
@@ -258,7 +241,7 @@ $('.floor-map polygon').magnificPopup({
       'margin-top': '-' + ($(window).height()/2) + 'px',
       height: $(window).height() + 'px',
       width: 'auto',
-      left: '50%'
+      left: '67%'
     });
     $('.map-wrap #img').add('.map-wrap #img-svg').css('margin-left', '-' + ($('.map-wrap #img').width()/2) + 'px');
   };
@@ -283,7 +266,7 @@ $('.floor-map polygon').magnificPopup({
           'margin-top': '-' + ($(window).height()/2) + 'px',
           height: $(window).height() + 'px',
           width: 'auto',
-          left: '50%'
+          left: '67%'
         });
         $('.map-wrap #img').add('.map-wrap #img-svg').css('margin-left', '-' + ($('.map-wrap #img').width()/2) + 'px');
       };
@@ -301,9 +284,8 @@ $('.floor-map polygon').magnificPopup({
     });
 
 
-
   $(function(){
-    $('polygon').on('click', function(event) {
+    $('#img-svg polygon').on('click', function(event) {
       /* Act on the event */
       $('#house').css('display', 'none').siblings('.flats').fadeIn('fast');
       $('.slider').get(0).slick.setPosition();
@@ -311,7 +293,7 @@ $('.floor-map polygon').magnificPopup({
     });
   })
 
-
+/*---------------------------------------------------------------------------------*/
 
 
 
