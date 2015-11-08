@@ -118,7 +118,7 @@ $('.floor-map polygon').magnificPopup({
         center: mapCenterCoord,
         zoom: 16,
         disableDefaultUI: true,
-        scrollwheel: false,
+        scrollwheel: true,
         mapTypeId: google.maps.MapTypeId.ROADMAP
       };
 
@@ -204,23 +204,6 @@ $('.floor-map polygon').magnificPopup({
     });
   };
   
-
-  /*if ($('img[usemap]').length > 0) {
-    $('img[usemap]').rwdImageMaps();
-  };*/
-  
-  /*if ($('.MapImg').length > 0) {
-    $(function () {
-        var data = {};
-        $('.MapImg').maphilight({
-        fillColor: '928148',
-        strokeColor: 'rgba(152,136,83, 0.5)',
-        fillOpacity: 0.5
-      });
-        data.alwaysOn = true;
-        $('area[alt="sold"]').data('maphilight', data).trigger('alwaysOn.maphilight');
-    });  
-  };*/
 
   if ($('.mini-slim').length > 0) {
     $('.mini-slim').slimScroll({

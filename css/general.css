@@ -428,12 +428,13 @@ nav li a                         {
 
 
 nav li a:hover,
-nav li a.active                  {
+nav li a.active:hover            {
                                      color: #ddd9ce;
                                      border-bottom: 1px solid #ddd9ce;
                                      padding-bottom: 3px;
                                      top: -2px;
                                  }
+nav li a.active                  {  color: #9e8b4c;}
 header .phone                    {
                                      height: 100%;
                                      float: right;
