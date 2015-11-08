@@ -426,7 +426,7 @@ nav li a                         {
 }
 
 
-
+nav li                           { position: relative;}
 nav li a:hover,
 nav li a.active:hover            {
                                      color: #ddd9ce;
@@ -434,6 +434,18 @@ nav li a.active:hover            {
                                      padding-bottom: 3px;
                                      top: -2px;
                                  }
+nav li.active:after              {  content: " ";
+                                    width: 45px;
+                                    margin-left: -22px;
+                                    position: absolute;
+                                    left: 50%;
+                                    height: 21px;
+                                    background-image: url(../images/menu-arrow.png);
+                                    background-repeat: no-repeat;
+                                    background-size: 100% 100%;
+                                    bottom: -60px;
+                                    opacity: 0.8;
+                                  }
 nav li a.active                  {  color: #9e8b4c;}
 header .phone                    {
                                      height: 100%;
@@ -457,6 +469,7 @@ header .phone span               {
 
         @media (max-width: 1200px) {
           header                  { height: 75px;}
+          nav li.active:after     { display: none;}
           header .phone           { width: 214px;}
 
           .menu-button            { display: inline-block; vertical-align: middle;}
@@ -483,6 +496,7 @@ header .phone span               {
 
         @media (max-height: 320px) and (orientation: landscape) {
           header                  { height: 55px;}
+          nav li.active:after     { display: none;}
           nav .menu               { padding-top: 15px;}
         }
 
