@@ -776,11 +776,11 @@ li.status-color__sold:before            {   background-color: #5E5E5E;}
                                         }
  .mfp-close                             {   font-size: 0px; width: 34px; height: 34px; 
                                             right: 20px; top: 20px;
-                                            background-image: url(../images/cross.png);
-                                            background-repeat: no-repeat;
-                                            -webkit-background-size: 100% 100%;
-                                                  -o-background-size: 100% 100%;
-                                                     background-size: 100% 100%; 
+                                            background-image: url(../images/cross.png) !important;
+                                            background-repeat: no-repeat !important;
+                                            -webkit-background-size: 100% 100% !important;
+                                                  -o-background-size: 100% 100% !important;
+                                                     background-size: 100% 100% !important; 
                                         }
 .about-flat .right,
 .about-flat .left                       {
