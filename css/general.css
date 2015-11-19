@@ -439,11 +439,11 @@ nav li.active:after              {  content: " ";
                                     margin-left: -22px;
                                     position: absolute;
                                     left: 50%;
-                                    height: 21px;
+                                    height: 20px;
                                     background-image: url(../images/menu-arrow.png);
                                     background-repeat: no-repeat;
                                     background-size: 100% 100%;
-                                    bottom: -60px;
+                                    bottom: -57px;
                                     opacity: 0.8;
                                   }
 nav li a.active                  {  color: #9e8b4c;}
@@ -1502,7 +1502,8 @@ a[href^="https://maps.google.com/maps"]{display:none !important}
 #history .section               { position: relative;
                                   -webkit-box-shadow: inset 0px 0px 150px 20px rgba(0,0,0,1);
                                      -moz-box-shadow: inset 0px 0px 150px 20px rgba(0,0,0,1);
-                                          box-shadow: inset 0px 0px 150px 20px rgba(0,0,0,1);}
+                                          box-shadow: inset 0px 0px 150px 20px rgba(0,0,0,1);
+                                  overflow: hidden;}
 
 
 
@@ -1510,7 +1511,8 @@ a[href^="https://maps.google.com/maps"]{display:none !important}
                                   position: fixed;
                                   margin-top: -140px;
                                   top: 50%;
-                                  left: 5%;}
+                                  left: 5%;
+                                  z-index: 1;}
 #historyMenu:after              { content: " "; width: 2px; left: -1px; top: 20px;
                                   bottom: 20px; background-color: #000;
                                   position: absolute;
@@ -1546,16 +1548,70 @@ a[href^="https://maps.google.com/maps"]{display:none !important}
 
 
 .sect-2                          { text-align: center; position: relative;}
+.sect-2 .tooltip                 { position: absolute; top: 0; left: 0; bottom: 0;}
+.sect-2 .tooltip .box            { z-index: 10!important; position: relative; vertical-align: middle;}
 .map-title                       { position: absolute; right: 30px; top: 130px;}
 .sect-2 .wrap                    { width: 80%; display: inline-block; position: relative; padding-top: 50px;}
-.sect-2 img                      { width: 100%; opacity: 0.5; max-height: 100%;}
+.sect-2 img                      { width: 100%; opacity: 0.5; max-height: 100%; position: relative;}
 
-.marker-big                       { background-image: url(../images/marker-mini.png);
+.marker-mini                     { background-image: url(../images/marker-mini.png);
                                     background-size: 100% 100%;
                                     background-position: 50% 50%;
                                     display: block;
                                     position: absolute;
-                                    margin-top: }
+                                    margin-top: -54px;
+                                    height: 54px;
+                                    width: 46px;
+                                    cursor: pointer;
+                                    margin-left: -23px;}
+.marker-big                      { background-image: url(../images/map/main-marker.png);
+                                    background-size: 100% 100%;
+                                    background-position: 50% 50%;
+                                    display: block;
+                                    position: absolute;
+                                    margin-top: -92px;
+                                    margin-left: -41px;
+                                    height: 98px;
+                                    width: 82px;
+                                    cursor: pointer;}
+.marker-main                     { top: 64%; left: 44%;}
+.marker-01                       { top: 73%; left: 26%;}
+.marker-02                       { top: 50%; left: 36%;}
+.marker-03                       { top: 67%; left: 38%;}
+.marker-04                       { top: 78%; left: 43%;}
+.marker-05                       { top: 66%; left: 50%;}
+.marker-06                       { top: 51%; left: 57%;}
+.marker-07                       { top: 66%; left: 61%;}
+.marker-08                       { top: 85%; left: 62%;}
+.marker-09                       { top: 51%; left: 69%;}
+
+@media (max-width: 1200px) {
+  .sect-2 .wrap                  { width: 100%; padding-top: 0; height: auto;}
+  .map-title                     { top: 30px;}
+  #historyMenu                   {display: none;}
+  .sect-2 .tooltip               { padding-top: 0;}
+}
+@media (max-height: 650px) {
+  .sect-2 .wrap                  { width: 100%; padding-top: 0; height: auto;}
+  .map-title                     { display: none;} 
+  #historyMenu                   { display: none;}
+  .sect-2 .tooltip               { padding-top: 0;}
+}
+@media (max-width: 1000px) {
+  .sect-2 .wrap                  { width: 100%; padding-top: 0; height: auto;}
+  .map-title                     { display: none;}
+}
+@media (max-width: 900px) {
+  .sect-2 .wrap                  { width: 120%; margin-left: -10%;}
+}
+@media (max-width: 700px) {
+  .sect-2 .wrap                  { width: 140%; margin-left: -20%;}
+}
+@media (max-width: 500px) {
+  .sect-2 .wrap                  { width: 160%; margin-left: -30%;}
+}
+
+
 
 /*-------------------------- section-1 -----------------------------*/
 #fullpage-history .sect-1  {

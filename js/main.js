@@ -306,6 +306,17 @@ $('.floor-map polygon').magnificPopup({
     });
   };
 
+  /*history map events*/
+  $('.marker-mini').add('.marker-big').on('click', function(event) {
+    event.preventDefault();
+    var dataHref = $(this).attr('data-href');
+    $('.'+dataHref).css('display', 'inline-block').siblings('.box').css('display', 'none');
+    $('.'+dataHref).find('.mini-slider').get(0).slick.setPosition();
+  });
+
+
+
+
   if ($('.mini-slider').length > 0) {
     $('.mini-slider').slick({
       arrows: false,
