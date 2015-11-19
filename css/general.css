@@ -1614,6 +1614,7 @@ a[href^="https://maps.google.com/maps"]{display:none !important}
 
 
 /*-------------------------- section-1 -----------------------------*/
+#fullpage-history .wrap {text-align: center;}
 #fullpage-history .sect-1  {
   background-image: url(../images/history-1-Bg.png);
   background-repeat: no-repeat;
@@ -1632,7 +1633,7 @@ a[href^="https://maps.google.com/maps"]{display:none !important}
 font-size: 16px; color: #333333; line-height: 20px;
 font-family: "MinionPro";
 margin: 0 auto 55px;
--webkit-transform:scale(0.85,0.97); /* Safari and Chrome */
+-webkit-transform:scale(0.87,0.97); /* Safari and Chrome */
                                             -moz-transform:scale(0.87,0.97); /* Firefox */
                                             -ms-transform:scale(0.87,0.97); /* IE 9+ */
                                             -o-transform:scale(0.87,0.97); /* Opera */
@@ -1656,9 +1657,58 @@ margin: 0 auto 55px;
 
 
 
+.history-info-block {
+  display: inline-block;
+  vertical-align: middle;
+  text-align: left;
+  padding-top: 100px;
+}
 
+.history-info-block .img-wrap {
+  width: 312px;
+  margin-right: 60px;
+  display: inline-block; vertical-align: top;
+}
+.history-info-block .img-wrap img {width: 100%;}
+.history-info-block__text {
+  display: inline-block; vertical-align: top;
+  width: 430px;
+}
+.history-info-block__text h2 {
+  font-size: 32px; color: #000;
+  margin-bottom: 45px;
+font-weight: normal;
+line-height: 32px;
+font-variant: small-caps;
+position: relative;
+margin-bottom: 60px;
+transform: scale(1,1.5);
+-webkit-transform: scale(0.85,0.97);
+-moz-transform: scale(0.85,0.97);
+-ms-transform: scale(0.85,0.97);
+-o-transform: scale(0.85,0.97);
+margin-left: -35px;
+}
+.history-info-block__text h2:after {
+    content: " ";
+    width: 68px;
+    height: 1px;
+    position: absolute;
+    background-color: #000;
+    bottom: -30px;
+    opacity: 0.6;
+    left: 0%;
+}
 
-
+.history-info-block__text p {
+  font-size: 16px; color: #333333; line-height: 20px;
+font-family: "MinionPro";
+margin: 0 0 25px 0; margin-left: -30px;
+-webkit-transform:scale(0.87,0.97); /* Safari and Chrome */
+-moz-transform:scale(0.87,0.97); /* Firefox */
+-ms-transform:scale(0.87,0.97); /* IE 9+ */
+-o-transform:scale(0.87,0.97); /* Opera */
+}
 
 
 
