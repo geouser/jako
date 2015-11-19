@@ -288,7 +288,7 @@ $('.floor-map polygon').magnificPopup({
       slideSelector: '.fp-slide',
       scrollOverflow: false,
       responsiveWidth: 1200,
-      responsiveHeight: 750,
+      responsiveHeight: 650,
       normalScrollElements: '.mini-slim'
     });
   };

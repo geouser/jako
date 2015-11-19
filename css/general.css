@@ -453,7 +453,8 @@ nav li.active:after              {  content: " ";
                                     height: 20px;
                                     background-image: url(../images/menu-arrow.png);
                                     background-repeat: no-repeat;
-                                    background-size: 100% 100%;
+                                    background-size: 100% 110%;
+                                    background-position: 50% 100%;
                                     bottom: -59px;
                                     opacity: 0.8;
                                   }
@@ -1437,7 +1438,7 @@ a[href^="https://maps.google.com/maps"]{display:none !important}
 @media (max-height: 850px) {
   .mini-slider .slide             { height: 250px;}
 }
-@media (max-height: 749px) {
+@media (max-height: 649px) {
   #about .section-2 .fp-tableCell,
   #about .section-3 .fp-tableCell { height: auto!important; padding: 50px 0;}
   #about .section-2,
@@ -1626,7 +1627,7 @@ a[href^="https://maps.google.com/maps"]{display:none !important}
   .sect-2 .wrap                  { width: 140%; margin-left: -20%;}
 }
 @media (max-width: 500px) {
-  .sect-2 .wrap                  { width: 160%; margin-left: -30%;}
+  .sect-2 .wrap                  { width: 190%; margin-left: -40%;}
 }
 
 
