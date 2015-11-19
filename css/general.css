@@ -1483,3 +1483,92 @@ a[href^="https://maps.google.com/maps"]{display:none !important}
   .section-1.full-section h1      { font-size: 25px; margin-bottom: 10px; line-height: 25px;}
   .section-1.full-section h1 br   { display: none;}
 }
+
+
+
+
+
+/*---------------------------------------------------------------*/
+/*----------------------    HISTORY     -------------------------*/
+/*----------------------      PAGE      -------------------------*/
+/*---------------------------------------------------------------*/
+#history                        { position: relative;
+                                  background-image: url(../images/main-bg.jpg);
+                                  background-repeat: repeat;}
+#history .section               { position: relative;
+                                  -webkit-box-shadow: inset 0px 0px 220px 0px rgba(0,0,0,1);
+                                     -moz-box-shadow: inset 0px 0px 220px 0px rgba(0,0,0,1);
+                                          box-shadow: inset 0px 0px 220px 0px rgba(0,0,0,1);}
+
+
+
+#historyMenu                    { height: 360px;
+                                  position: fixed;
+                                  margin-top: -140px;
+                                  top: 50%;
+                                  left: 5%;}
+#historyMenu:after              { content: " "; width: 2px; left: -1px; top: 20px;
+                                  bottom: 20px; background-color: #000;
+                                  position: absolute;
+                                  z-index: -1;}
+#historyMenu .wrap              { display: inline-block; vertical-align: middle;}
+#historyMenu li                 { list-style: none; height: 40px; max-width: 160px;}
+#historyMenu a                  { position: relative; padding-left: 25px; display: inline-block; color: #686868}
+#historyMenu .bubble            { display: block;
+                                  width: 12px;
+                                  height: 12px;
+                                  border-radius: 50%;
+                                  position: absolute;
+                                  top: 50%;
+                                  margin-top: -6px;
+                                  left: 0;
+                                  margin-left: -6px;
+                                  border: 2px solid #000;
+                                  background-color: #fff;
+                                  -webkit-transition: all 0.3s ease;
+                                  -o-transition: all 0.3s ease;
+                                  transition: all 0.3s ease;}
+
+#historyMenu li:hover .bubble,
+#historyMenu li.active .bubble  { width: 20px;
+                                  height: 20px;
+                                  border: 3px solid #fff;
+                                  background-color: #000;
+                                  margin-top: -10px;
+                                  margin-left: -10px;}
+
+#historyMenu li:hover a, 
+#historyMenu li.active a         { color: #000; font-family: 'Georgia-Bold';}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

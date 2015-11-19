@@ -293,6 +293,19 @@ $('.floor-map polygon').magnificPopup({
     });
   };
 
+    if ($('#fullpage-history').length > 0) {
+    $('#fullpage-history').fullpage({
+      anchors: ['main', '1983', '1988', '1991', '2003', '2005', '2008', '2011', '2015'],
+      navigationTooltips: ['Историческая карта', '1983', '1988', '1991', '2003', '2005', '2008', '2011', '2015'],
+      menu: '#historyMenu',
+      slideSelector: '.fp-slide',
+      scrollOverflow: false,
+      responsiveWidth: 1200,
+      responsiveHeight: 650,
+      normalScrollElements: '.mini-slim'
+    });
+  };
+
   if ($('.mini-slider').length > 0) {
     $('.mini-slider').slick({
       arrows: false,
@@ -320,6 +333,21 @@ $('.floor-map polygon').magnificPopup({
 
 
 });
+
+if ($('#img-svg').length > 0) {
+  var object = document.getElementById("img-svg"); //получаем элмент object
+  var svgDocument = object.contentDocument; //получаем svg элемент внутри object
+  var svgElements = svgDocument.getElementsByTagName('polygon'); //получаем любой элемент внутри svg
+  for (var i = 0; i < svgElements.length; i++) {
+      svgElements[i].onclick = function( event ) {
+        var floor = event.target.getAttribute("fill");
+        $('#house').css('display', 'none').siblings('.flats').fadeIn('fast');
+        $('.slider').get(0).slick.setPosition();
+        $('.slider').get(0).slick.slickGoTo(1)
+      };
+  }  
+};
+
 
 
 
