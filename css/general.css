@@ -1583,6 +1583,8 @@ a[href^="https://maps.google.com/maps"]{display:none !important}
                                     width: 46px;
                                     cursor: pointer;
                                     margin-left: -23px;}
+.marker-mini:hover,
+.marker-mini.active              { background-image: url(../images/marker-mini-hover.png);}
 .marker-big                      { background-image: url(../images/map/main-marker.png);
                                     background-size: 100% 100%;
                                     background-position: 50% 50%;

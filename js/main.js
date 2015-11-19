@@ -175,8 +175,8 @@ $('.floor-map polygon').magnificPopup({
 
   $('.close-box').on('click', function(event) {
     event.preventDefault();
-      $(this).parent('.box').fadeOut('fast', function() { 
-    });
+      $(this).parent('.box').fadeOut('fast');
+      $('.marker-mini').add('.marker-big').removeClass('active');
   });
   
 
@@ -309,6 +309,7 @@ $('.floor-map polygon').magnificPopup({
   /*history map events*/
   $('.marker-mini').add('.marker-big').on('click', function(event) {
     event.preventDefault();
+    $(this).addClass('active').siblings('.marker-mini').add('.marker-big').removeClass('active');
     var dataHref = $(this).attr('data-href');
     $('.'+dataHref).css('display', 'inline-block').siblings('.box').css('display', 'none');
     $('.'+dataHref).find('.mini-slider').get(0).slick.setPosition();
