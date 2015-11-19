@@ -443,7 +443,7 @@ nav li.active:after              {  content: " ";
                                     background-image: url(../images/menu-arrow.png);
                                     background-repeat: no-repeat;
                                     background-size: 100% 100%;
-                                    bottom: -57px;
+                                    bottom: -59px;
                                     opacity: 0.8;
                                   }
 nav li a.active                  {  color: #9e8b4c;}
@@ -1550,6 +1550,7 @@ a[href^="https://maps.google.com/maps"]{display:none !important}
 .sect-2                          { text-align: center; position: relative;}
 .sect-2 .tooltip                 { position: absolute; top: 0; left: 0; bottom: 0;}
 .sect-2 .tooltip .box            { z-index: 10!important; position: relative; vertical-align: middle;}
+.sect-2 .tooltip .box a          { color: #65572a; text-decoration: underline;}
 .map-title                       { position: absolute; right: 30px; top: 130px;}
 .sect-2 .wrap                    { width: 80%; display: inline-block; position: relative; padding-top: 50px;}
 .sect-2 img                      { width: 100%; opacity: 0.5; max-height: 100%; position: relative;}
