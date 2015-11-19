@@ -1541,8 +1541,17 @@ a[href^="https://maps.google.com/maps"]{display:none !important}
 #historyMenu li.active a         { color: #000; font-family: 'Georgia-Bold';}
 
 
+.sect-2                          { text-align: center; position: relative;}
+.map-title                       { position: absolute; right: 30px; top: 130px;}
+.sect-2 .wrap                    { width: 80%; display: inline-block; position: relative; padding-top: 50px;}
+.sect-2 img                      { width: 100%; opacity: 0.5; max-height: 100%;}
 
-
+.marker-big                       { background-image: url(../images/marker-mini.png);
+                                    background-size: 100% 100%;
+                                    background-position: 50% 50%;
+                                    display: block;
+                                    position: absolute;
+                                    margin-top: }
 
 
 

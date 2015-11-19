@@ -295,8 +295,8 @@ $('.floor-map polygon').magnificPopup({
 
     if ($('#fullpage-history').length > 0) {
     $('#fullpage-history').fullpage({
-      anchors: ['main', '1983', '1988', '1991', '2003', '2005', '2008', '2011', '2015'],
-      navigationTooltips: ['Историческая карта', '1983', '1988', '1991', '2003', '2005', '2008', '2011', '2015'],
+      anchors: ['main', 'map', '1983', '1988', '1991', '2003', '2005', '2008', '2011', '2015'],
+      navigationTooltips: ['main', 'map', '1983', '1988', '1991', '2003', '2005', '2008', '2011', '2015'],
       menu: '#historyMenu',
       slideSelector: '.fp-slide',
       scrollOverflow: false,
