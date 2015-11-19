@@ -1280,7 +1280,8 @@ a[href^="https://maps.google.com/maps"]{display:none !important}
                                           vertical-align: middle;}
 #myMenu li.active a             { width: 12px; height: 12px; background-color: #9E8B4C;}
 
-.section-1.full-section .content {width: 100%;
+.section-1.full-section .content,
+#fullpage-history .content       {width: 100%;
                                   background-color: rgba(0,0,0,0.4);
                                   height: auto;
                                   position: absolute;
@@ -1289,7 +1290,8 @@ a[href^="https://maps.google.com/maps"]{display:none !important}
                                   right: 0;
                                   text-align: center;
                                   padding: 30px 0;}
-.section-1.full-section h1      { font-size: 40px;
+.section-1.full-section h1,
+#fullpage-history h1              { font-size: 40px;
                                   font-weight: normal;
                                   color: #fff;
                                   line-height: 35px;
@@ -1301,7 +1303,8 @@ a[href^="https://maps.google.com/maps"]{display:none !important}
                                   -moz-transform:scale(0.85,0.97); /* Firefox */
                                   -ms-transform:scale(0.85,0.97); /* IE 9+ */
                                   -o-transform:scale(0.85,0.97); /* Opera */}
-.section-1.full-section h1:after { content: " ";
+.section-1.full-section h1:after,
+#fullpage-history h1:after        { content: " ";
                                   width: 68px;
                                   height: 1px;
                                   position: absolute;
@@ -1310,7 +1313,7 @@ a[href^="https://maps.google.com/maps"]{display:none !important}
                                   opacity: 0.6;
                                   left: 50%;
                                   margin-left: -34px;}
-.section-1.full-section h1:before{ content: " ";
+.section-1.full-section h1:before  { content: " ";
                                   width: 124px;
                                   height: 40px;
                                   position: absolute;
@@ -1321,7 +1324,7 @@ a[href^="https://maps.google.com/maps"]{display:none !important}
                                   top: -71px;
                                   left: 50%;
                                   margin-left: -62px;}
-.section-1.full-section .more   { width: 220px;
+.section-1.full-section .more    { width: 220px;
                                   height: 54px;
                                   background-color: #DDD9CE;
                                   color: #000;
@@ -1338,7 +1341,8 @@ a[href^="https://maps.google.com/maps"]{display:none !important}
 .section-1.full-section .more span {display: inline-block; vertical-align: middle;}
 .section-1.full-section .more:hover   { background-color: #C1BEB4;}
 .section-1.full-section .more:before  { margin: 0;}
-.section-1.full-section .down-arrow   { width: 57px;
+.section-1.full-section .down-arrow,
+#fullpage-history .down-arrow    { width: 57px;
                                   height: 14px;
                                   display: block;
                                   margin: 0 auto;
@@ -1496,9 +1500,9 @@ a[href^="https://maps.google.com/maps"]{display:none !important}
                                   background-image: url(../images/main-bg.jpg);
                                   background-repeat: repeat;}
 #history .section               { position: relative;
-                                  -webkit-box-shadow: inset 0px 0px 220px 0px rgba(0,0,0,1);
-                                     -moz-box-shadow: inset 0px 0px 220px 0px rgba(0,0,0,1);
-                                          box-shadow: inset 0px 0px 220px 0px rgba(0,0,0,1);}
+                                  -webkit-box-shadow: inset 0px 0px 150px 20px rgba(0,0,0,1);
+                                     -moz-box-shadow: inset 0px 0px 150px 20px rgba(0,0,0,1);
+                                          box-shadow: inset 0px 0px 150px 20px rgba(0,0,0,1);}
 
 
 
@@ -1553,7 +1557,40 @@ a[href^="https://maps.google.com/maps"]{display:none !important}
                                     position: absolute;
                                     margin-top: }
 
+/*-------------------------- section-1 -----------------------------*/
+#fullpage-history .sect-1  {
+  background-image: url(../images/history-1-Bg.png);
+  background-repeat: no-repeat;
+  background-position: 50% 10%;
+  -webkit-background-size: 60% auto;
+       -o-background-size: 60% auto;
+          background-size: 60% auto;
+}
+#fullpage-history .content {
+  background-color: transparent;
+  margin: 0 auto;
+}
+#fullpage-history h1          {color: #000; font-size: 32px; line-height: 25px;}
+#fullpage-history h1:after    {background-color: #292929;}
+#fullpage-history .content p  { width: 810px;
+font-size: 16px; color: #333333; line-height: 20px;
+font-family: "MinionPro";
+margin: 0 auto 55px;
+-webkit-transform:scale(0.85,0.97); /* Safari and Chrome */
+                                            -moz-transform:scale(0.87,0.97); /* Firefox */
+                                            -ms-transform:scale(0.87,0.97); /* IE 9+ */
+                                            -o-transform:scale(0.87,0.97); /* Opera */
+}
+#fullpage-history .more {
+  font-size: 16px; color: #85784D; text-decoration: underline;
+}
+#fullpage-history .down-arrow {
+  background-image: url("../images/arrow-down-dark.png");
+}
 
+@media (max-width: 820px) {
+  #fullpage-history .content p  {width: 100%; padding: 0 20px;}  
+}
 
 
 
